@@ -1,0 +1,280 @@
+:root {
+  --very-lightgreen: #D0E7D2;
+  --darkgreen: #618264;
+  --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--lightgreen);
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .left-section {
+  height: 100%;
+  width: fit-content;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left-section img {
+  width: fit-content;
+  height: 45px;
+}
+/* END OF HEADER */
+
+/* MAIN */
+.main-main {
+  height: calc(100vh - 60px);
+  padding-top: 60px;
+  background-color: rgb(247, 245, 245);
+  overflow: hidden;
+}
+
+.main-main .main{
+  display: grid;
+  grid-template-rows: 100px 1fr;
+}
+
+.main-main .main .title {
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.main-main .main .title div:nth-child(1) {
+  margin-top: 23px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.main-main .main .title div:nth-child(2) {
+  margin-top: 5px;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgb(96, 96, 96);
+}
+
+/* ACCOUNT SETTING */
+
+.main-main .main .account-setting {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+
+
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .10);
+  margin-left: 70px;
+  margin-right: 70px;
+  margin-top: 16px;
+  border-radius: 10px;
+}
+
+/* ACCOUNT SETTING MENU */
+.main-main .main .account-setting .menu {
+  background-color: white;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+.main-main .main .account-setting .menu div:nth-child(1),
+.main-main .main .account-setting .menu div:nth-child(2) {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.main-main .main .account-setting .menu div:nth-child(1) a{
+  padding: 10px 60px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+.main-main .main .account-setting .menu div:hover a {
+  background-color: rgb(214, 213, 213);
+}
+
+.main-main .main .account-setting .menu div:active a {
+  background-color: rgb(230, 228, 228);
+}
+
+.main-main .main .account-setting .menu div:nth-child(2) a{
+  padding: 10px 52px;
+  border-radius: 4px;
+  transition: all 0.15s;
+}
+
+/* STYLES OF GENERAL INFO */
+.main-main .main .account-setting .form .update-info .title {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.main-main .main .account-setting .form .update-info .title2  {
+  font-size: 23px;
+  font-weight: 500;
+  margin: 0;
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+
+/* ACCOUNT SETTING GENERAL INFO FORM */
+.main-main .main .account-setting .form {
+  background-color: white;
+  border-left: 2px solid rgb(247, 245, 245);
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-bottom: 40px;
+
+  position: relative;
+}
+
+.main-main .main .account-setting .form .update-info {
+  margin: 50px;
+  margin-top: 30px;
+}
+
+.main-main .main .account-setting .form .update-info .input {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  display: inline-block;
+}
+
+/* MIDDLE LINE */
+.main-main .main .account-setting .line {
+  width: 100%;
+  height: 0.5px;
+  background-color: rgb(199, 199, 199);
+}
+
+/* STYLES OF INPUT */
+.main-main .main .account-setting .form .update-info .top-input .input,
+.main-main .main .account-setting .form .update-info .bottom-input .input {
+  margin-right: 120px;
+}
+
+.main-main .main .account-setting .form .update-info .middle-input .input {
+  margin-top: 25px;
+}
+
+.main-main .main .account-setting .form .update-info .middle-input {
+  margin-bottom: 10px;
+}
+
+.main-main .main .account-setting .form .update-info .top-input .input input,
+.main-main .main .account-setting .form .update-info .middle-input .input input,
+.main-main .main .account-setting .form .update-info .bottom-input .input input {
+  padding: 10px 16px;
+  width: 230px;
+  margin-right: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 0.5px solid rgb(199, 199, 199);
+  font-size: 16px;
+}
+
+.main-main .main .account-setting .form .update-info .middle-input .input input {
+  width: 600px;
+}
+
+.main-main .main .account-setting .form .update-info .input label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(96, 96, 96);
+}
+
+/* BUTTONS SAVE STYLES */
+/* BUTTON1 */
+.main-main .main .account-setting .buttons1 input{
+  margin-left: 40px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: var(--yellow);
+  cursor: pointer;
+  transition: background-color 0.15s;
+
+  position: absolute;
+  right: 50px;
+  bottom: 220px;
+}
+/* BUTTON2 */
+.main-main .main .account-setting .buttons2 input{
+  margin-left: 40px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: var(--yellow);
+  cursor: pointer;
+  transition: background-color 0.15s;
+
+  position: absolute;
+  right: 160px;
+  bottom: 20px;
+}
+
+.main-main .main .account-setting .buttons1 input:hover,
+.main-main .main .account-setting .buttons2 input:hover {
+  background-color: var(--darkyellow);
+ }
+
+ /* BACK BUTTON STYLES */
+ .main-main .main .account-setting .update-image .back {
+  position: absolute;
+  right: 20px;
+  bottom: 20px;
+
+ }
+ .main-main .main .account-setting .back a button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  right: 50px;
+  bottom: 20px;
+ }
+
+ .main-main .main .account-setting .back a button:hover {
+  opacity: 0.6;
+ }
+ 
+ .main-main .main .account-setting .back a:active button {
+  opacity: .2;
+ }
+
+ .Username_error {
+    background-color: rgb(255, 182, 189);
+    padding: 10px 13px;
+    border-radius: 6px;
+    margin-top: 6px;
+    margin-bottom: -4px;
+    width: 200px;
+    text-align: center;
+ }
+
