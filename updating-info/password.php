@@ -25,17 +25,21 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     if($Old_pass != $Confirm_pass){
       if($New_pass === $Confirm_pass){
         if(password_verify($Old_pass, $pass)){
+
+          $hashNew_pass = password_hash($New_pass,PASSWORD_DEFAULT);
   
           $qry = "UPDATE users SET pass =:pass WHERE username = :username";
           $stmt = $pdo->prepare($qry);
-          $stmt->bindParam(":pass", $New_pass);
+          $stmt->bindParam(":pass", $hashNew_pass);
           $stmt->bindParam(":username", $username);
           $stmt->execute();
+
+          
           
           header("Location: ../profile-setting.php?Success2=Successfully Changed!");
           $pdo = null;
         } else {
-          header("Location: ../profile-setting.php?Error2=Your old password and new password do not match!");
+          header("Location: ../profile-setting.php?Error2=Your old password is invalid!");
           exit();
         }
       } else {

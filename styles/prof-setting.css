@@ -219,9 +219,9 @@ a {
   cursor: pointer;
   transition: background-color 0.15s;
 
-  position: absolute;
-  right: 50px;
-  bottom: 220px;
+  position: fixed;
+  right: 120px;
+  bottom: 470px;
 }
 /* BUTTON2 */
 .main-main .main .account-setting .buttons2 input{
@@ -235,14 +235,15 @@ a {
   cursor: pointer;
   transition: background-color 0.15s;
 
-  position: absolute;
-  right: 160px;
-  bottom: 20px;
+  position: fixed;
+  right: 240px;
+  bottom: 270px;
 }
 
 .main-main .main .account-setting .buttons1 input:hover,
 .main-main .main .account-setting .buttons2 input:hover {
   background-color: var(--darkyellow);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
  }
 
  /* BACK BUTTON STYLES */
@@ -259,17 +260,19 @@ a {
   border-radius: 6px;
   cursor: pointer;
   font-size: 16px;
-  position: absolute;
-  right: 50px;
-  bottom: 20px;
+  position: fixed;
+  right: 120px;
+  bottom: 270px;
  }
 
  .main-main .main .account-setting .back a button:hover {
-  opacity: 0.6;
+  opacity: 0.8;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
  }
  
  .main-main .main .account-setting .back a:active button {
   opacity: .2;
+ 
  }
 
 input[type="number"]::-webkit-outer-spin-button, 
@@ -288,7 +291,7 @@ input[type="number"] {
     color: var(--error-mes-txt);
     padding: 10px 13px;
     border-radius: 6px;
-    width: 200px;
+    width: fit-content;
     margin-top: 10px;
     text-align: center;
  }
@@ -298,9 +301,27 @@ input[type="number"] {
     color: var(--success-mes-txt);
     padding: 10px 13px;
     border-radius: 6px;
-    width: 200px;
+    width: fit-content;
     margin-top: 10px;
     text-align: center;
  }
 
- 
+ .Username_Success2 {
+  background-color: var(--success-mes-bg);
+  color: var(--success-mes-txt);
+  padding: 10px 13px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.Username_Error2 {
+  background-color: var(--error-mes-bg);
+  color: var(--error-mes-txt);
+  padding: 10px 13px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-top: 10px;
+  text-align: center;
+}

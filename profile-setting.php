@@ -11,20 +11,10 @@ session_start();
 
   foreach($results as $row){
   $email = $row["email"];
-  $username= $row["username"];
+  $PhoneNo= $row["PhoneNo"];
+  $users_Address= $row["users_Address"];
   $id = $row["id"];
   }
-
-  $qry2 = "SELECT * FROM users_otherinfo WHERE users_id = :id";
-  $stmt2 = $pdo->prepare($qry2);
-  $stmt2->bindParam(":id", $id);
-  $stmt2->execute();
-  $results2 = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
-  foreach($results2 as $row2){
-    $PhoneNo = $row2["PhoneNo"];
-    $users_Address = $row2["users_Address"];
-    }
 ?>
 
 <!DOCTYPE html>
@@ -38,7 +28,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/prof-settings.css">
+  <link rel="stylesheet" href="styles/prof-setting.css">
   <!-- title -->
     <title>Green Auction</title>
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">
@@ -73,10 +63,6 @@ session_start();
                 <div class="title">General Info</div>
 
                 <div class="top-input">
-                  <div class="input">
-                      <label for="username">Username</label>
-                      <input type="text" name="username" placeholder="Change your Username" value="<?php echo $username ?>">
-                    </div>
 
                     <div class="input">
                       <label for="email">Email</label>
