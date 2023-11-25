@@ -1,8 +1,15 @@
-
 :root {
   --very-lightgreen: #D0E7D2;
   --darkgreen: #618264;
   --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;;
+  --yellowhover: rgba(255, 255, 0, 0.459);
 }
 
 body::after {
@@ -15,6 +22,8 @@ body::after {
 
 }
 
+/* RESET */
+
 html {
   scroll-behavior: smooth;
 }
@@ -26,14 +35,18 @@ li {
  list-style: none; 
 }
 
+/* MAIN */
 .main {
   height: 100vh;
 }
 
+/* HOME SECTION */
 #home-section {
   height: 100vh;
+  background-color: rgb(249, 249, 249);
 }
 
+/* NAVBAR */
 .navbar {
   width: 100%;
   height: 60px;
@@ -45,6 +58,7 @@ li {
   z-index: 1000;
 }
 
+/* LEFT SECTION */
 .main #home-section .navbar .left-section {
 
   margin-left: 60px;
@@ -55,10 +69,11 @@ li {
 
 
 .main #home-section .navbar .left-section img {
-  width: 200px;
+  width: fit-content;
   height: 45px;
 }
 
+/* RIGHT SECTION */
 .main #home-section .navbar .right-section {
   display: flex;
   margin-right: 60px;
@@ -108,16 +123,17 @@ li {
   opacity: 0.7;
 }
 
+/* PROFILE SETTINGS CONTAINER */
 .main #home-section .acc-box-container {
   width: fit-content;
-  height: 125px;
+  height: fit-content;
   padding: 20px 20px;
   background-color: rgb(241, 246, 242);
   border: none;
   border-radius: 4px;
   z-index: 1001;
   transition: transform 0.45s ease;
-  transform: scale(1);
+  transform: scale(0);
   box-shadow: 2px 2px 10px rgba(0, 0, 0, .25),
               -2px -2px 10px rgba(0, 0, 0, .25);
 
@@ -131,7 +147,7 @@ li {
   align-items: flex-start;
   
 }
-
+/* JS POP UP */
 .main #home-section .acc-box-container.active-popup {
   transform: scale(1);
 }
@@ -175,6 +191,7 @@ span {
   background-color: var(--darkgreen);
 }
 
+/* HERO */
 .main #home-section .hero {
   width: 100%;
   height: calc(100vh - 60px);
@@ -247,7 +264,7 @@ span {
   font-weight: 300;
 }
 
-
+/* THREE LOGO */
 .main #home-section .hero .three-logo {
   display: grid;
   grid-template-columns: 1fr repeat(3,450px) 1fr;
@@ -295,15 +312,19 @@ span {
   margin: 0 8px;
 }
 
+.main #home-section .hero .three-logo .logo:nth-child(2) .trusted-pic{
+ height: 150px;
+}
+/* PRODUCTS SECTION */
 #products-section {
-  height: 150vh;
-  background-color: rgb(198, 196, 196);
+  height: 140vh;
+  background-color: rgb(249, 249, 249);
   display: grid;
-  grid-template-rows: 150px 1fr 1fr;
+  grid-template-rows: 150px 50px 34vh 1fr;
 }
 
+/* SEARCH SECTION */
 #products-section .search-section {
-  background-color: lightblue;
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -340,6 +361,11 @@ span {
   padding-right: 30px;
 }
 
+#products-section .search-section input:focus, 
+#products-section .search-section input:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
 
 
 #products-section .search-section button {
@@ -354,6 +380,10 @@ span {
   cursor: pointer;
   transition: all .15s;
 }
+ 
+#products-section .search-section button:hover {
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
 
 #products-section .search-section button:hover {
   background-color: rgb(232, 232, 6);
@@ -364,68 +394,118 @@ span {
   height: 30px;
 }
 
-
+/* CATEGORIES SECTION */
 #products-section .categories {
-  font-size: 30px;
+  font-size: 35px;
   font-weight: 500;
-  margin-left: 30px;
-  margin-bottom: 12px;
+  margin-left: 60px;
+  margin-top: 6px;
 }
 
 
 #products-section .category-section {
- 
-  margin-bottom: 100%;
-  background-color: lightpink;
+  height: fit-content;
   display: grid;
-  grid-template-columns: 1fr repeat(4, 170px) 1fr;
-  grid-auto-rows: 120px;
+  grid-template-columns: 1fr repeat(5, 175px) 1fr;
+  grid-auto-rows: 130px;
   row-gap: 30px;
   column-gap: 50px;
 }
 
 
 
-#products-section .category-section div:nth-child(1) {
+
+#products-section .category-section a:nth-child(1){
   grid-row: 1/2;
   grid-column: 2/3;
+}
+#products-section .category-section a:nth-child(2) {
+  grid-row: 1/2;
+  grid-column: 3/4;
+}
+#products-section .category-section a:nth-child(3) {
+  grid-row: 1/2;
+  grid-column: 4/5;
+}
+#products-section .category-section a:nth-child(4) {
+  grid-row: 1/2;
+  grid-column: 5/6;
+}
+#products-section .category-section a:nth-child(5) {
+  grid-row: 1/2;
+  grid-column: 6/7;
+}
+#products-section .category-section a:nth-child(6) {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+#products-section .category-section a:nth-child(7) {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+#products-section .category-section a:nth-child(8) {
+
+  grid-row: 2/3;
+  grid-column: 4/5;
+}
+
+#products-section .category-section a:nth-child(9) {
+
+  grid-row: 2/3;
+  grid-column: 5/6;
+}
+
+#products-section .category-section a:nth-child(10) {
+
+  grid-row: 2/3;
+  grid-column: 6/7;
+}
+
+#products-section .category-section a div {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  margin-bottom: 15px;
+  z-index: 5;
+}
+
+#products-section .category-section a {
   
-}
-#products-section .category-section div:nth-child(2) {
-  grid-row: 1/2;
-  grid-column: 3/4;
-}
-#products-section .category-section div:nth-child(3) {
-  grid-row: 1/2;
-  grid-column: 4/5;
-}
-#products-section .category-section div:nth-child(4) {
-  grid-row: 1/2;
-  grid-column: 5/6;
-}
-#products-section .category-section div:nth-child(5) {
-  grid-row: 2/3;
-  grid-column: 2/3;
-}
-#products-section .category-section div:nth-child(6) {
-  grid-row: 2/3;
-  grid-column: 3/4;
-}
-#products-section .category-section div:nth-child(7) {
-  grid-row: 2/3;
-  grid-column: 4/5;
-}
-#products-section .category-section div:nth-child(8) {
+  color:  black;
+  border: 0.5px solid var(--darkgreen);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  height: 100%;
+  z-index: 5;
+  
 
-  grid-row: 2/3;
-  grid-column: 5/6;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  position: relative;
+
+  transition: all 0.15s;
+  background-color: var(--lightgreen);
 }
 
-#products-section .category-section div{
-  border: 1px solid black;
-  border-radius: 4px;
+#products-section .category-section a:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  background-color: var(--very-lightgreen);
 }
 
+
+
+
+/* DISCOVERIES SECTION */
+#products-section .discoveries-section .daily-disco{
+  margin-top: 10px;
+  font-size: 35px;
+  font-weight: 500;
+  margin-left: 60px;
+}
 
 
 

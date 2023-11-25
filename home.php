@@ -41,7 +41,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/homee.css"> 
+    <link rel="stylesheet" href="styles/home.css"> 
     
   <!-- title -->
     <title>Green Auction</title>
@@ -109,21 +109,21 @@ session_start();
         <div class="three-logo">
           <div class="logo"></div>
           <div class="logo">
-            <img class="trusted-pic" src="./pictures/shpping-pic.jpg" alt="shipping-picture">
+            <img class="trusted-pic" src="./pictures/1.png" alt="shipping-picture">
             <div class="paragraph">
               <div class="title">Shipping</div>
               <div class="sentence">We prioritize swift, secure delivers with a focus on efficiency and safety at every stage.</div>
             </div>
           </div>
           <div class="logo">
-            <img class="trusted-pic" src="./pictures/easy-trans-pic.jpg" alt="easy-transaction-picture">
+            <img class="trusted-pic" src="./pictures/3.png" alt="easy-transaction-picture">
             <div class="paragraph">
               <div class="title">EASY TRANSACTION</div>
               <div class="sentence">Our goal is to ensure smooth, secure transactions with user-friendly experience and utmost safety for all parties involved.</div>
             </div>
           </div>
           <div class="logo">
-            <img class="trusted-pic" src="./pictures/trusted-pic.jpg" alt="trusted-picture">
+            <img class="trusted-pic" src="./pictures/2.png" alt="trusted-picture">
             <div class="paragraph">
               <div class="title">TRUSTED SITE</div>
               <div class="sentence">Our platform ensures secure, efficiency transactions with a primary focus on the highest safety standards for universal use.</div>
@@ -150,21 +150,25 @@ session_start();
         <div class="categories">CATEGORIES</div>
        
         <div class="category-section">
-              <div class="">Fresh Produce</div>
-              <div class="">Organic Products</div>
-              <div class="">Fresh Produce</div>
-              <div class="">Fresh Produce</div>
-              <div class="">Fresh Produce</div>
-              <div class="">Organic Products</div>
-              <div class="">Fresh Produce</div>
-              <div class="">Fresh Produce</div>
+
+              <a href=""><div class="">Fresh Produce</div></a>
+              <a href=""><div class="">Preserved Products</div></a>
+              <a href=""><div class="">Organic Products</div></a>
+              <a href=""><div class="">Nuts and Seeds</div></a>
+              <a href=""><div class="">Herbs and Spices</div></a>
+              <a href=""><div class="">Honey and Bee Products</div></a>
+              <a href=""><div class="">Specialty Products</div></a>
+              <a href=""><div class="">Flowers and Plants</div></a>
+              <a href=""><div class="">Homemade Products</div></a>
+              <a href=""><div class="">Seasonal Items</div></a>
         </div>
 
         <div class="discoveries-section">
-
+          <div class="daily-disco">Daily Discoveries</div>
         </div>
 
-      </div>
+    </div>
+
     <div id="bidding-section"></div>
     <div id="contact-us-section"></div>
   </div>
