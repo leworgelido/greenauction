@@ -15,29 +15,41 @@ foreach($results as $row){
 }
 
 if($_SERVER["REQUEST_METHOD"] == "POST"){
-
   $Old_pass = $_POST["Oldpass"];
   $New_pass = $_POST["New_pass"];
   $Confirm_pass = $_POST["Confirm_pass"];
 
+
+
   if(!(empty($Old_pass) || empty($New_pass) || empty($Confirm_pass))){
-    if($New_pass === $Confirm_pass){
-      if($Old_pass === $pass){
-        echo "yes";
+    if($Old_pass != $Confirm_pass){
+      if($New_pass === $Confirm_pass){
+        if(password_verify($Old_pass, $pass)){
+  
+          $qry = "UPDATE users SET pass =:pass WHERE username = :username";
+          $stmt = $pdo->prepare($qry);
+          $stmt->bindParam(":pass", $New_pass);
+          $stmt->bindParam(":username", $username);
+          $stmt->execute();
+          
+          header("Location: ../profile-setting.php?Success2=Successfully Changed!");
+          $pdo = null;
+        } else {
+          header("Location: ../profile-setting.php?Error2=Your old password and new password do not match!");
+          exit();
+        }
       } else {
-        echo "3";
+       
+        header("Location: ../profile-setting.php?Error2=Your new password and confirm password do not match!");
+        exit();
       }
     } else {
-      echo "2";
-   
-
-    
+      header("Location: ../profile-setting.php?Error2=Your old and new password is just the same, please try again.");
+      exit();
     }
-
   } else {
-    echo "1";
-   
-  
+    header("Location: ../profile-setting.php?Error2=Please ensure all required fields are filled before Changing it");
+    exit();
   }
   
 

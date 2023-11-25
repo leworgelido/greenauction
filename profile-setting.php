@@ -38,7 +38,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/prof-setting.css">
+  <link rel="stylesheet" href="styles/prof-settings.css">
   <!-- title -->
     <title>Green Auction</title>
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">
@@ -124,6 +124,7 @@ session_start();
                       <label for="email">Old Password</label>
                       <input type="password" name="Oldpass" placeholder="Password">
                     </div>
+
                     
                     <div class="input">
                       <label for="email">New Password</label>
@@ -139,6 +140,17 @@ session_start();
                     <input type="submit" value="Save">
                   </div>
               </form>
+                  <?php
+                    if(isset($_GET['Success2'])){
+                        echo '<div class="Username_Success2">' .$_GET['Success2']. '</div>';
+                      }
+                  ?>
+                  <?php
+                    if(isset($_GET['Error2'])){
+                        echo '<div class="Username_Error2">' .$_GET['Error2']. '</div>';
+                      }
+                  ?>
+                  
           
         </div>
       
