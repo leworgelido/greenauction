@@ -62,10 +62,10 @@ session_start();
         </div>
 
           <ul class="right-section">
-            <li><a href="#home-section">HOME</a></li>
-            <li><a href="#products-section">PRODUCTS</a></li>
-            <li><a href="#bidding-section">BIDDING</a></li>
-            <li><a href="#contact-us-section">CONTACT</a></li>
+            <li><a class="navv" href="#home-section">HOME</a></li>
+            <li><a class="navv" href="#products-section">PRODUCTS</a></li>
+            <li><a class="navv" href="#bidding-section">BIDDING</a></li>
+            <li><a class="navv" href="#contact-us-section">CONTACT</a></li>
               <div class="account-settings">
                 <button class="btn-acc">
                   <?php
@@ -76,19 +76,26 @@ session_start();
                       <img src="<?php echo 'uploads/' . $row['image']?>"> <?php
                     } 
                   ?>
-
                 </button>
+              </div>
+                
+              <div class="AddCart">
+                <a href="" class="add-to-cart">
+                  <img src="./pictures/add-to-cart-logo.png" alt="">
+                </a>
+              </div>
+                
           </ul>
       </div>
 
       <div class="acc-box-container">
         <a href="acc-setting.php">Account Setting</a>
         <span></span>
-        <a href="#">Start Selling</a>
+        <a href="./start-selling/start-selling.php">Start Selling</a>
         <span></span>
         <a href="#">My Orders</a>
         <span></span>
-        <a href="#">Start Selling</a>
+        <a href="#">My History</a>
         <span></span>
         <a href="logout.php">Logout</a>
         <span></span>
@@ -151,16 +158,46 @@ session_start();
        
         <div class="category-section">
 
-              <a href=""><div class="">Fresh Produce</div></a>
-              <a href=""><div class="">Preserved Products</div></a>
-              <a href=""><div class="">Organic Products</div></a>
-              <a href=""><div class="">Nuts and Seeds</div></a>
-              <a href=""><div class="">Herbs and Spices</div></a>
-              <a href=""><div class="">Honey and Bee Products</div></a>
-              <a href=""><div class="">Specialty Products</div></a>
-              <a href=""><div class="">Flowers and Plants</div></a>
-              <a href=""><div class="">Homemade Products</div></a>
-              <a href=""><div class="">Seasonal Items</div></a>
+              <a href="">
+                <div class="">Fresh Produce</div>
+                <img src="./pictures/fresh-produce.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Preserved Products</div>
+                <img src="./pictures/preserved.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Organic Products</div>
+                <img src="./pictures/organic.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Nuts and Seeds</div>
+                <img src="./pictures/nuts.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Herbs and Spices</div>
+                <img src="./pictures/herbs.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Honey and Bee Products</div>
+                <img src="./pictures/honey.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Specialty Products</div>
+                <img src="./pictures/specialty.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Flowers and Plants</div>
+                <img src="./pictures/plants.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Homemade Products</div>
+                <img src="./pictures/homemade.png" alt="">
+              </a>
+              <a href="">
+                <div class="">Seasonal Items</div>
+                <img src="./pictures/seasonal.png" alt="">
+              </a>
         </div>
 
         <div class="discoveries-section">
