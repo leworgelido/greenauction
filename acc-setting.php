@@ -34,7 +34,8 @@
               move_uploaded_file($fileTmp, $FileUploadPath);
 
               
-              header("Location: acc-setting.php");
+              header("Location: acc-setting.php?Success=Successfully%20Changed!");
+
             } else {
               $mes = "Your files size is too large!";
             }
@@ -54,7 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/acc-settings.css">
+  <link rel="stylesheet" href="styles/acc-setting.css">
   <!-- title -->
     <title>Green Auction</title>
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">
@@ -117,6 +118,11 @@
                     echo "<div class='error'>$mes</div>";
                   }
                 ?> 
+                <?php
+                    if(isset($_GET['Success'])){
+                        echo '<div class="Username_Success">' .$_GET['Success']. '</div>';
+                      }
+                  ?>
                 </form>
                 <div class="back">
                   <a href="home.php"><button>Back</button></a>

@@ -44,8 +44,40 @@ session_start();
         $result->bindParam(":image", $defaultImage);
         $result->execute();
 
-        header("location: index.php");
-        die();
+        if($result) {
+
+          $qry = "SELECT * FROM users WHERE username = :username";
+          $result = $pdo->prepare($qry);
+          
+          $result->bindParam(":username", $username);
+          $result->execute();
+
+          $results = $result->fetchAll(PDO::FETCH_ASSOC);
+
+          foreach($results as $row){
+            $id = $row["id"];
+        }
+
+        if($results){
+          $PhoneNo = "";
+          $users_Address = "";
+
+        
+          $qry = "INSERT INTO users_otherinfo  (PhoneNo, users_Address, users_id) VALUES (:PhoneNo, :users_Address, :users_id)";
+          $result = $pdo->prepare($qry);
+          
+          $result->bindParam(":PhoneNo", $PhoneNo);
+          $result->bindParam(":users_Address", $users_Address);
+          $result->bindParam(":users_id", $id);
+          $result->execute();
+
+          header("location: index.php");
+          die();
+        }
+        
+        }
+
+        
       }
 
 

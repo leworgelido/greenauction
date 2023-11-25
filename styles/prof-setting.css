@@ -5,6 +5,10 @@
   --whitegreen: #f5f9f0;
   --yellow: rgb(245, 245, 59);
   --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;;
 }
 
 /* HEADER */
@@ -176,7 +180,7 @@ a {
 }
 
 .main-main .main .account-setting .form .update-info .middle-input {
-  margin-bottom: 70px;
+  margin-bottom: 10px;
 }
 
 .main-main .main .account-setting .form .update-info .top-input .input input,
@@ -192,7 +196,7 @@ a {
 }
 
 .main-main .main .account-setting .form .update-info .middle-input .input input {
-  width: 600px;
+  width: 33vw;
 }
 
 .main-main .main .account-setting .form .update-info .input label {
@@ -268,10 +272,33 @@ a {
   opacity: .2;
  }
 
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
  .Username_error {
-    background-color: rgb(255, 182, 189);
+    
+    background-color: var(--error-mes-bg);
+    color: var(--error-mes-txt);
     padding: 10px 13px;
     border-radius: 6px;
-    margin: 6px 0;
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
  }
 
+ .Username_Success {
+    background-color: var(--success-mes-bg);
+    color: var(--success-mes-txt);
+    padding: 10px 13px;
+    border-radius: 6px;
+    width: 200px;
+    margin-top: 10px;
+    text-align: center;
+ }

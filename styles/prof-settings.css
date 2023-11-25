@@ -176,7 +176,7 @@ a {
 }
 
 .main-main .main .account-setting .form .update-info .middle-input {
-  margin-bottom: 10px;
+  margin-bottom: 70px;
 }
 
 .main-main .main .account-setting .form .update-info .top-input .input input,
@@ -269,12 +269,13 @@ a {
  }
 
  .Username_error {
-    background-color: rgb(255, 182, 189);
+    background-color: #F2DEDE;
+    color: #A94442;
     padding: 10px 13px;
     border-radius: 6px;
-    margin-top: 6px;
-    margin-bottom: -4px;
-    width: 200px;
-    text-align: center;
+    margin: 6px 0;
  }
 
+ .Username_Success {
+
+ }
