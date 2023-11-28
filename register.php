@@ -20,7 +20,7 @@ session_start();
       $pass = $_POST["pass"];
       $email = $_POST["email"];
       $defaultImage = 'account-default-pic.jpg';
-      $PhoneNo = "";
+      $PhoneNo = 0;
       $users_Address = "";
 
 
