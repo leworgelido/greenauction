@@ -23,6 +23,56 @@
     </div>
   </div>
 
+  <div class="main">
+    <div class="title">
+      <div class="sub-title">Welcome to <span>Green Auction</span></div>
+      <div class="sub-sub-title">To get started, sign up as a seller by giving the needed information.</div>
+    </div>
+
+
+    <div class="container">
+      <div class="shop-info">Register for free at our online store and unleash the potential to sell more. </div>
+      <div class="registration">
+        <form action="#" method="POST">
+          
+        <div class="input">
+          <label for="shop_name">Shop Name</label>
+          <input type="text" placeholder="Enter your Shop name" name="shop_name">
+        </div>
+
+        <div class="input">
+          <label for="full_name">Full Name</label>
+          <input type="text" placeholder="Enter your Full Name" name="full_name">
+        </div>
+
+        <div class="input">
+          <label for="">Pickup Address</label>
+          <input type="text" placeholder="Pickup Address" name="Pick_Address">
+        </div>
+
+        <div class="input">
+          <label for="">Email</label>
+          <input type="text" placeholder="Shop Email" name="Shop_Email">
+        </div>
+
+        <div class="input">
+          <label for="">Phone number</label>
+          <input type="number" placeholder="Shop Phone Number" name="Shop_PhoneNo">
+        </div>
+
+          <input class="submit" type="submit" value="Submit">
+
+          <div class="button-back">
+            <a href="../home.php">Back</a>
+          </div>
+        </form>
+          
+      </div>
+        
+
+    </div>
+  </div>
+
   </div>
 </body>
 </html>

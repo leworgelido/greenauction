@@ -8,7 +8,8 @@
   --error-mes-bg: #F2DEDE;
   --error-mes-txt: #A94442;
   --success-mes-bg: #D4EDDA;
-  --success-mes-txt: #40754C;;
+  --success-mes-txt: #40754C;
+  --light-gray: rgb(96, 96, 96);
 }
 
 /* HEADER */
@@ -36,3 +37,151 @@
   height: 45px;
 }
 /* END OF HEADER */
+
+/* MAIN */
+.main {
+  height: calc(100vh - 60px);
+  background-color: rgb(247, 245, 245);
+  padding-top: 60px;
+
+}
+
+/* TOP CONTAINER */
+.main .title {
+  background-color: rgb(247, 245, 245);
+  margin-left: 60px;
+  margin-top: 23px;
+  margin-right: 60px;
+}
+
+.main .title .sub-title {
+  font-size: 35px;
+  font-weight: 700;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+.main .title .sub-title span {
+  color: var(--darkgreen);
+}
+
+/* BOTTOM CONTAINER */
+.main .container {
+  background-color: #fff;
+  margin-left: 60px;
+  margin-right: 60px;
+  margin-top: 10px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  
+
+  display: grid;
+  grid-template-rows: 40px 1fr ;
+  
+
+}
+
+/* REGISTRATION */
+.main .container .registration form {
+  margin: 30px;
+  margin-top: 20px;
+  margin-bottom: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.main .container .shop-info {
+  margin-top: 15px;
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 500;
+  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+}
+
+.main .container .registration .input label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(96, 96, 96);
+}
+
+.main .container .registration .input:nth-child(3) label,
+.main .container .registration .input:nth-child(4) label,
+.main .container .registration .input:nth-child(5) label {
+  margin-top: 30px;
+}
+
+.main .container .registration .input {
+  display: flex;
+  flex-direction: column;
+  width: 18vw;
+}
+
+.main .title .sub-sub-title {
+  color: var(--light-gray);
+  margin-top: 5px;
+}
+
+.main .container .registration .input input {
+  padding: 10px 16px;
+  width: 230px;
+  margin-right: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 0.5px solid rgb(199, 199, 199);
+  font-size: 16px;
+}
+
+.main .container .registration .input:nth-child(3) input {
+  width: 600px;
+}
+/* BUTTON SUBMIT */
+.main .container .registration .submit {
+  margin-left: 40px;
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 6px;
+  background: var(--yellow);
+  cursor: pointer;
+  transition: background-color 0.15s;
+  margin-top: 125px;
+  margin-left: 500px;
+}
+
+.main .container .registration .submit:hover {
+  background-color: var(--darkyellow);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+/* REMOVING NUMBER SCROLL BAR */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* BUTTON BACK */
+.main .container .registration .button-back {
+  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+.main .container .registration .button-back a {
+ padding: 10px 30px;
+ background-color: rgb(240, 240, 240);
+ border-radius: 4px;
+ text-decoration: none;
+ color: black;
+}
+
+.main .container .registration .button-back a:hover {
+  opacity: 0.8;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
