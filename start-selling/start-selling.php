@@ -171,7 +171,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             echo '<div class="success-container">';
               echo '<div class="text">' . $_GET["success"] . '</div>';
               echo '<a href="../home.php" class="btn-ok">Okay</a>';
-              echo '<a href="#" class="btn-shop">Go to your Shop</a>';
+              echo '<a href="../start-selling/add-product.php" class="btn-shop">Go to your Shop</a>';
             echo '</div>';
           echo '</div>';
         }
