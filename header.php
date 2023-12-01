@@ -32,7 +32,7 @@ session_start();
             
           } else {
             $mes = "Go to your Shop";
-            $loc = "./start-selling/add-product.php";
+            $loc = "add-product.php";
           }
 
           $pdo = null;
@@ -50,7 +50,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/headerr.css">
   <title>Document</title>
 </head>
 <body>
@@ -59,7 +59,7 @@ session_start();
     <div id="home-section">
       <div class="navbar">
         <div class="left-section">
-          <a href="index.php">
+          <a href="home.php">
             <img src="./pictures/logo5.png" alt="">
           </a>
           

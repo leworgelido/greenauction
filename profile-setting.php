@@ -34,7 +34,7 @@ session_start();
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">
 </head>
 <body>
-<div class="header">
+  <div class="header">
     <div class="left-section">
       <img src="./pictures/logo5.png" alt="">
     </div>

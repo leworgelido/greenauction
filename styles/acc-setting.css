@@ -201,7 +201,7 @@ a {
   border-radius: 6px;
   background: var(--yellow);
   cursor: pointer;
-  transition: background-color 0.15s;
+  transition: background-color 0.15s; 
  }
 
  .main-main .main .account-setting .update-image .buttonUpload button:hover {

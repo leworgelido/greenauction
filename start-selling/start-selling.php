@@ -3,7 +3,7 @@ session_start();
 require_once '../database/connect.php';
 $username = $_SESSION["username"];
 
-$qry = "SELECT * FROM users WHERE username = :username";
+    $qry = "SELECT * FROM users WHERE username = :username";
       $stmt = $pdo->prepare($qry);
       $stmt->bindParam(":username", $username);
       $stmt->execute();
@@ -19,6 +19,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
   $pickAddress = $_POST["Pick_Address"];
   $shopEmail = $_POST["Shop_Email"];
   $shopPhoneNo = $_POST["Shop_PhoneNo"];
+  $shop_image = "../uploads/account-default-pic.jpg";
+  $shop_description = "PUT SOME DESCRIPTION";
 
   try {
     
@@ -34,7 +36,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
       if(!$results) {
         
-        $qry = "INSERT into users_shop (shop_name, full_name, pickup_Address, shop_email, shop_PhoneNo, user_id) VALUES (:shop_name, :full_name, :pickup_Address, :shop_email, :shop_PhoneNo, :user_id)";
+        $qry = "INSERT into users_shop (shop_name, full_name, pickup_Address, shop_email, shop_PhoneNo, user_id, shop_image, shop_description) VALUES (:shop_name, :full_name, :pickup_Address, :shop_email, :shop_PhoneNo, :user_id, :shop_image, :shop_description)";
         $stmt = $pdo->prepare($qry);
         $stmt->bindParam(":shop_name", $shopName);
         $stmt->bindParam(":full_name", $fullName);
@@ -42,6 +44,8 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $stmt->bindParam(":shop_email", $shopEmail);
         $stmt->bindParam(":shop_PhoneNo", $shopPhoneNo);
         $stmt->bindParam(":user_id", $id);
+        $stmt->bindParam(":shop_image", $shop_image);
+        $stmt->bindParam(":shop_description", $shop_description);
         $results = $stmt->execute();
 
         if($results) {

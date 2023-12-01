@@ -123,7 +123,7 @@
                         echo '<div class="Username_Success">' .$_GET['Success']. '</div>';
                       }
                   ?>
-                </form>
+            </form>
                 <div class="back">
                   <a href="home.php"><button>Back</button></a>
                 </div>  

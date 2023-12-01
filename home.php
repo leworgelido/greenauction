@@ -32,7 +32,7 @@ session_start();
             
           } else {
             $mes = "Go to your Shop";
-            $loc = "./start-selling/add-product.php";
+            $loc = "add-product.php";
           }
 
           $pdo = null;
@@ -69,7 +69,7 @@ session_start();
     <div id="home-section">
       <div class="navbar">
         <div class="left-section">
-          <a href="#home-section">
+          <a href="home.php">
             <img src="./pictures/logo5.png" alt="">
           </a>
           

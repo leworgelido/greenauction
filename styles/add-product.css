@@ -1,0 +1,309 @@
+:root {
+  --very-lightgreen: #D0E7D2;
+  --darkgreen: #618264;
+  --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;
+  --dirty-white-bg: rgb(247, 245, 245);
+  --btn-white: rgb(240, 240, 240);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--lightgreen);
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .left-section {
+  height: 100%;
+  width: fit-content;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left-section img {
+  width: fit-content;
+  height: 45px;
+}
+/* END OF HEADER */
+/* MAIN */
+
+.main {
+  height: calc(100vh - 60px);
+  background-color: var(--dirty-white-bg);
+  margin-top: 60px;  
+}
+
+.main .container {
+  display: grid;
+  grid-template-rows: 300px 230px 1fr;
+  gap: 10px;
+  height: calc(100vh - 60px);
+  
+}
+
+/* THREE CONTAINER */
+.main .container div:nth-child(1),
+.main .container div:nth-child(2),
+.main .container div:nth-child(3){
+  background-color: #fff;
+}
+
+/* 1st CONTAINER */
+
+/* IMAGE */
+.main .container div:nth-child(1) {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+.main .container div:nth-child(1) .img-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  margin-left: 50px;
+
+  margin-right: 15px;
+}
+
+
+
+.main .container div:nth-child(1) .img-container img{
+  width: 190px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid gray;
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload {
+  margin: 0;
+  margin-top: 10px;
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload .box label {
+  position: relative;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  background-color: rgb(240, 240, 240);
+  border: none;
+  line-height: 40px;
+ 
+  transition: all .15s ease-in-out;
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload .box input {
+  position: absolute;
+  top: -30px;
+
+}
+.main .container div:nth-child(1) .img-container .buttonUpload .box {
+  border-radius: 4px;
+  width: 100px;
+  height: 40px;
+  overflow: hidden;
+  justify-content: center;
+  margin: 0;
+  margin-right: 15px;
+  position: relative;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.);
+  transition: all 0.15s ease-in-out;
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload .box:hover {
+  opacity: 0.7;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload button {
+  width: 100px;
+  height: 40px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  background: var(--yellow);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.main .container div:nth-child(1) .img-container .buttonUpload button:hover {
+  background-color: var(--darkyellow);
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+
+
+
+
+/* TEXT */
+.main .container div:nth-child(1) .text-container {
+  height: 100%;
+  margin-left: 20px;
+  margin-right: 60px;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .container div:nth-child(1) .text-container .shop_name {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main .container div:nth-child(1) .text-container .shop_description {
+}
+
+.main .container div:nth-child(1) .text-container .description {
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(96, 96, 96);
+}
+
+.main .container div:nth-child(1) .text-container .btn {
+  display: flex;
+  justify-content: end;
+}
+.main .container div:nth-child(1) .text-container .btn .add-description {
+  
+  padding: 10px 12px;
+  width: 200px;
+  font-size: 16px;
+  border: 1px solid var(--lightgreen);
+  background-color: var(--lightgreen);
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+}
+
+.main .container div:nth-child(1) .text-container .add-description:hover {
+  background-color: transparent;
+}
+
+/* EDIT DESCRIPTION */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.35);
+  transform: scale(0);
+}
+
+.overlay.active-edit-popup {
+  transform: scale(1);
+}
+
+.overlay .container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--lightgreen);
+  padding: 15px;
+  width: 410px;
+  height: 225px;
+  border-radius: 4px;
+
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay .container .text {
+  margin-right: 210px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.overlay .container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay .container form #description-textarea {
+  margin-bottom: 8px;
+  outline: none;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  font-size: 16px;
+  font-family: Roboto, 'sans-serif';
+}
+
+/* BUTTON */
+.overlay .container form .btn {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.overlay .container form .btn .btn-save {
+  padding: 10px;
+  width: 90px;
+  font-size: 16px;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  margin-left: 13px;
+  background-color: var(--yellow);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.overlay .container form .btn .btn-save:hover {
+  background-color: var(--darkyellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+
+}
+
+.overlay .container form .btn .back-btn {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  background-color: var(--btn-white);
+  width: 60px;
+  text-align: center;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all .15s ease-in-out;
+}
+
+.overlay .container form .btn .back-btn:hover {
+  opacity: 0.8;
+  box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+
+
+
+.main .container div:nth-child(2) {
+ 
+
+}
+
+.main .container div:nth-child(3) {
+  margin-bottom: 20px;
+}
