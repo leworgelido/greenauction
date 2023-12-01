@@ -21,6 +21,20 @@ session_start();
 
           $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+          foreach($result as $row){
+            $have_shop = $row["have_shop"];
+          }
+
+          if($have_shop === 0) {
+            $mes = "Start Selling";
+            $loc = "./start-selling/start-selling.php";
+
+            
+          } else {
+            $mes = "Go to your Shop";
+            $loc = "./start-selling/add-product.php";
+          }
+
           $pdo = null;
           $stmt = null;
   }  catch (PDOException $error) {
@@ -62,8 +76,8 @@ session_start();
         </div>
 
           <ul class="right-section">
-            <li><a class="navv" href="#home-section">HOME</a></li>
-            <li><a class="navv" href="#products-section">PRODUCTS</a></li>
+            <li><a class="navv" href="home.php">HOME</a></li>
+            <li><a class="navv" href="products.php">PRODUCTS</a></li>
             <li><a class="navv" href="#bidding-section">BIDDING</a></li>
             <li><a class="navv" href="#contact-us-section">CONTACT</a></li>
               <div class="account-settings">
@@ -91,7 +105,7 @@ session_start();
       <div class="acc-box-container">
         <a href="acc-setting.php">Account Setting</a>
         <span></span>
-        <a href="./start-selling/start-selling.php">Start Selling</a>
+        <a href="<?php echo $loc ?>"><?php echo $mes ?></a>
         <span></span>
         <a href="#">My Orders</a>
         <span></span>
@@ -141,75 +155,6 @@ session_start();
       </div>
     </div>
 
-    <div id="products-section">
-      
-        <div class="search-section">
-          <div class=""></div>
-          <div class="mid">
-            <input type="text" placeholder="Search" name="search">
-            <button>
-              <img src="./pictures/search.svg" alt="">
-            </button>
-          </div>
-          <div class=""></div>
-        </div>
-
-        <div class="categories">CATEGORIES</div>
-       
-        <div class="category-section">
-
-              <a href="">
-                <div class="">Fresh Produce</div>
-                <img src="./pictures/fresh-produce.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Preserved Products</div>
-                <img src="./pictures/preserved.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Organic Products</div>
-                <img src="./pictures/organic.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Nuts and Seeds</div>
-                <img src="./pictures/nuts.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Herbs and Spices</div>
-                <img src="./pictures/herbs.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Honey and Bee Products</div>
-                <img src="./pictures/honey.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Specialty Products</div>
-                <img src="./pictures/specialty.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Flowers and Plants</div>
-                <img src="./pictures/plants.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Homemade Products</div>
-                <img src="./pictures/homemade.png" alt="">
-              </a>
-              <a href="">
-                <div class="">Seasonal Items</div>
-                <img src="./pictures/seasonal.png" alt="">
-              </a>
-        </div>
-
-        <div class="discoveries-section">
-          <div class="daily-disco">Daily Discoveries</div>
-        </div>
-
-    </div>
-
-    <div id="bidding-section"></div>
-    <div id="contact-us-section"></div>
-  </div>
-    
 <script src="script.js"></script>
 
 </body>

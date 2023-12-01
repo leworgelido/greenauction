@@ -72,73 +72,72 @@
   margin-top: 10px;
   margin-bottom: 60px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, .10);
   
 
   display: grid;
-  grid-template-rows: 40px 1fr ;
-  
+  grid-template-rows: 80px 1fr 80px ;
+}
 
+.main .container .upper-line {
+  height: 0.5px;
+  width: 80%;
+  background-color: rgb(186, 182, 182);
+  display: flex;
+  align-self: flex-end;
+  justify-self: center;
+  margin-bottom: 20px;
+}
+
+.main .container .lower-line {
+  height: 0.5px;
+  width: 80%;
+  background-color: rgb(186, 182, 182);
+  display: flex;
+  align-self: flex-start;
+  justify-self: center;
+  margin-top: 20px;
 }
 
 /* REGISTRATION */
-.main .container .registration form {
-  margin: 30px;
-  margin-top: 20px;
-  margin-bottom: 0;
-
+.main .container .registration{
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
-.main .container .shop-info {
-  margin-top: 15px;
-  margin-left: 15px;
-  font-size: 20px;
-  font-weight: 500;
-  text-shadow: 1px 1px 10px rgba(0, 0, 0, 0.15);
+/* LABELS 'n INPUTS */
+.main .container .registration form .input {
+  margin: 15px 0;
 }
 
-.main .container .registration .input label {
+.main .container .registration form .input label {
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 500;
   color: rgb(96, 96, 96);
-}
-
-.main .container .registration .input:nth-child(3) label,
-.main .container .registration .input:nth-child(4) label,
-.main .container .registration .input:nth-child(5) label {
-  margin-top: 30px;
-}
-
-.main .container .registration .input {
   display: flex;
   flex-direction: column;
-  width: 18vw;
 }
 
-.main .title .sub-sub-title {
-  color: var(--light-gray);
-  margin-top: 5px;
-}
-
-.main .container .registration .input input {
-  padding: 10px 16px;
-  width: 230px;
-  margin-right: 10px;
-  border-radius: 4px;
-  outline: none;
-  border: 0.5px solid rgb(199, 199, 199);
+.main .container .registration form .input input {
+  padding: 12px 16px;
+  width: 250px;
   font-size: 16px;
+  border-radius: 6px;
+  outline: none;
+  border: 1px solid rgb(186, 182, 182);
 }
 
-.main .container .registration .input:nth-child(3) input {
+.main .container .registration form .input:nth-child(3) input {
   width: 600px;
 }
+
+
+
+
 /* BUTTON SUBMIT */
 .main .container .registration .submit {
-  margin-left: 40px;
+  
   width: 100px;
   height: 40px;
   font-size: 18px;
@@ -146,9 +145,7 @@
   border-radius: 6px;
   background: var(--yellow);
   cursor: pointer;
-  transition: background-color 0.15s;
-  margin-top: 125px;
-  margin-left: 500px;
+  transition: all 0.15s ease-in-out;
 }
 
 .main .container .registration .submit:hover {
@@ -168,12 +165,11 @@ input[type="number"] {
 }
 
 /* BUTTON BACK */
-.main .container .registration .button-back {
-  margin-bottom: 20px;
+.main .container .registration a{
   margin-left: 20px;
 }
 
-.main .container .registration .button-back a {
+.main .container .registration  a {
  padding: 10px 30px;
  background-color: rgb(240, 240, 240);
  border-radius: 4px;
@@ -181,7 +177,72 @@ input[type="number"] {
  color: black;
 }
 
-.main .container .registration .button-back a:hover {
+.main .container .registration a:hover {
   opacity: 0.8;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
+}
+
+/* SUCCESS created shop CSS */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.30);
+  z-index: 2000;
+  transition: all 0.15s ease-in-out;
+}
+
+.overlay .success-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  width: 325px;
+  height: 120px;
+  background-color: white;
+  border-radius: 3px;
+  transition: all 0.15s ease-in-out;
+}
+
+.overlay .success-container .text {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 52px;
+  font-size: 20px;
+  color: var(--success-mes-txt);
+  font-weight: 300;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.overlay .success-container .btn-ok {
+  padding: 12px 24px;
+  background-color: var(--lightgreen);
+  border-radius: 4px;
+  margin-right: 10px;
+  transition: all .15s ease-in-out;
+}
+
+.overlay .success-container .btn-shop {
+  padding: 10px 22px;
+  border-radius: 4px;
+  margin-left: 70px;
+  background-color: var(--yellow);
+  border: 2px solid var(--yellow);
+  transition: all .15s ease-in-out;
+}
+
+.overlay .success-container .btn-shop:hover {
+  background-color: transparent;
+}
+
+.overlay .success-container .btn-ok:hover {
+  opacity: 0.7;
 }

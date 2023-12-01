@@ -78,7 +78,7 @@ session_start();
                   <div class="middle-input">
                     <div class="input">
                       <label for="users_Address">Full Address</label>
-                      <input type="text" name="users_Address" placeholder="Enter Your Full Address" value="<?php echo $users_Address ?>">
+                      <input type="text" name="users_Address" placeholder="Street / Brgy / City / Country / Postal Code" value="<?php echo $users_Address ?>">
                     </div>
 
                     <?php

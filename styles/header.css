@@ -12,17 +12,11 @@
   --yellowhover: rgba(255, 255, 0, 0.459);
 }
 
-body::after {
-  position: absolute;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  z-index: -1;
-  content: url(../pictures/hero-bg.jpg) url(../pictures/hero-bg-3.jpg) url(../pictures/hero-bg-5.jpg) url(../pictures/hero-bg-6.jpg);
-
-}
-
 /* RESET */
+
+body {
+  overflow: hidden;
+}
 
 html {
   scroll-behavior: smooth;
@@ -50,7 +44,7 @@ li {
 .navbar {
   width: 100%;
   height: 60px;
-  background-color: transparent;
+  background-color: var(--lightgreen);
   display: flex;
   justify-content: space-between;
   position: fixed;
@@ -66,6 +60,8 @@ li {
   align-self: center;
   justify-self: center;
 }
+
+
 
 
 .main #home-section .navbar .left-section img {
@@ -89,6 +85,10 @@ li {
   justify-content: center;
   transition: all ease-in-out 0.10s;
 }
+
+
+
+
 /* ACCOUNT SETTING LOGO */
 .main #home-section .navbar .right-section .account-settings {
   width: 60px;
@@ -225,131 +225,3 @@ span {
   color: var(--very-lightgreen);
   background-color: var(--darkgreen);
 }
-
-/* HERO */
-.main #home-section .hero {
-  width: 100%;
-  height: calc(100vh - 60px);
-  padding-top: 60px;
-  display: grid;
-  grid-template-rows: 65vh 1fr;
-}
-
-.dark-overlay {
-  width: 100%;
-  height: 65vh;
-  background-color: black;
-  z-index: 2;
-  opacity: 0.2;
-}
-
-.main #home-section .hero .img {
-  width: 100%;
-  height: 100%;
-  background-image: url(../pictures/hero-bg.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: bottom;
-  animation: imgSlide 24s linear infinite;
-  position: relative;
-} 
-
-@keyframes imgSlide {
-  0%  {
-    background-image: url(../pictures/hero-bg.jpg);
-  }
-  25%  {
-    background-image: url(../pictures/hero-bg-3.jpg);
-  }
-  50%  {
-    background-image: url(../pictures/hero-bg-6.jpg);
-  }
-  75%  {
-    background-image: url(../pictures/hero-bg-5.jpg);
-  }
-  100%  {
-    background-image: url(../pictures/hero-bg.jpg);
-  }
-}
-
-.main #home-section .hero .img .slogan, .main #home-section .hero .img .greeting  {
-  color: #fff;
-  text-shadow: -1px 1px 5px rgba(0, 0, 0, 0.5);
-  font-size: 33px;
-  line-height: 50px;
-  text-align: center;
-  padding-bottom: 60px;
-  font-weight: 500;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.main #home-section .hero .img .slogan {
-  margin-top: 60px;
-}
-
-
-
-.main #home-section .hero .img .greeting {
-  font-size: 50px;
-  padding-bottom: 250px;
-  text-transform: uppercase;
-  font-weight: 300;
-}
-
-/* THREE LOGO */
-.main #home-section .hero .three-logo {
-  display: grid;
-  grid-template-columns: 1fr repeat(3,450px) 1fr;
-}
-
-.main #home-section .hero .three-logo .logo {
-  display: flex;
-}
-
-.main #home-section .hero .three-logo .logo .paragraph {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  line-height: 20px;
-  margin: 0 15px;
-}
-
-.main #home-section .hero .three-logo .logo .title {
-  text-transform: uppercase;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 5px;
-  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.10);
-}
-
-.main #home-section .hero .three-logo .logo .sentence {
-  font-size: 16px;
-  font-weight: 300;
-  text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.10);
-}
-
-.main #home-section .hero .three-logo .logo:nth-child(2),
-.main #home-section .hero .three-logo .logo:nth-child(3),
-.main #home-section .hero .three-logo .logo:nth-child(4)
-{
-  display: flex;
-  align-items: center;
-}
-
-.trusted-pic {
-  width: fit-content;
-  height: 120px;
-  margin: 0 8px;
-}
-
-.main #home-section .hero .three-logo .logo:nth-child(2) .trusted-pic{
- height: 150px;
-}
-
-
-

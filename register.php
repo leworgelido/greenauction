@@ -22,6 +22,7 @@ session_start();
       $defaultImage = 'account-default-pic.jpg';
       $PhoneNo = 0;
       $users_Address = "";
+      $have_shop = 0;
 
 
       $hash = password_hash($pass,PASSWORD_DEFAULT);
@@ -38,7 +39,7 @@ session_start();
       }
       else
       {
-        $qry = "INSERT INTO users  (username,pass,email, image, PhoneNo, users_Address) VALUES (:username, :pass, :email, :image, :PhoneNo, :users_Address)";
+        $qry = "INSERT INTO users  (username,pass,email, image, PhoneNo, users_Address, have_shop) VALUES (:username, :pass, :email, :image, :PhoneNo, :users_Address, :have_shop)";
         $result = $pdo->prepare($qry);
         
         $result->bindParam(":username", $username);
@@ -47,6 +48,7 @@ session_start();
         $result->bindParam(":image", $defaultImage);
         $result->bindParam(":PhoneNo", $PhoneNo);
         $result->bindParam(":users_Address", $users_Address);
+        $result->bindParam(":have_shop", $have_shop);
         $result->execute();
 
         header("location: index.php");
