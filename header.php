@@ -1,9 +1,16 @@
+<!-- php -->
 <?php
 session_start();
+
+  if(!isset($_SESSION["username"])) {
+    header("location: index.php");
+    exit; 
+  }
 
   require_once './database/connect.php';
 
   $username = $_SESSION["username"];
+  
 
   try{
           $qry = "SELECT * FROM users WHERE username = :username";
@@ -14,11 +21,27 @@ session_start();
 
           $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
+          foreach($result as $row){
+            $have_shop = $row["have_shop"];
+          }
+
+          if($have_shop === 0) {
+            $mes = "Start Selling";
+            $loc = "./start-selling/start-selling.php";
+
+            
+          } else {
+            $mes = "Go to your Shop";
+            $loc = "./start-selling/add-product.php";
+          }
+
           $pdo = null;
           $stmt = null;
   }  catch (PDOException $error) {
     echo $error->getMessage();  
   }
+
+  
 ?>
 
 <!DOCTYPE html>
@@ -72,7 +95,7 @@ session_start();
       <div class="acc-box-container">
         <a href="acc-setting.php">Account Setting</a>
         <span></span>
-        <a href="./start-selling/start-selling.php">Start Selling</a>
+        <a href="<?php echo $loc ?>"><?php echo $mes ?></a>
         <span></span>
         <a href="#">My Orders</a>
         <span></span>
