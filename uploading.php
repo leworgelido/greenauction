@@ -26,7 +26,7 @@
       $allowed = array("jpg", "jpeg", "png");
 
       if(in_array($file_ex_lc,$allowed)) {
-        if($fileSize < 125000){
+        if($fileSize < 250000){
 
 
           $NewFileName = uniqid("IMG-",true) . '.'. $file_ex_lc;
@@ -46,9 +46,9 @@
           header("Location: home-shop.php");
 
         } else {
-          $mes = "Your files size is too large!";
+          header("Location: home-shop.php?error=Your files size is too large!");
         }
       } else {
-          $mes = "You can't upload this type of files!";
+        header("Location: home-shop.php?error=You can't upload this type of files!");
       }
   }

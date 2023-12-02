@@ -220,7 +220,15 @@
   border-radius: 4px;
   font-size: 16px;
   margin-top: 15px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.10);
   margin-left: 300px;
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+}
+
+.main .column-container .add-product-container .add-prod form .btn-prod:hover {
+  background-color: var(--darkyellow);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
 }
 
 /* ANOTHER LINE */

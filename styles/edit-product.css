@@ -1,0 +1,202 @@
+
+:root {
+  --very-lightgreen: #D0E7D2;
+  --darkgreen: #618264;
+  --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;
+  --dirty-white-bg: rgb(247, 245, 245);
+  --btn-white: rgb(240, 240, 240);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--lightgreen);
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .left-section {
+  height: 100%;
+  width: fit-content;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left-section img {
+  width: fit-content;
+  height: 45px;
+}
+/* END OF HEADER */
+/* EDIT OVERLAY */
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.50);
+  z-index: 2000;
+}
+
+.overlay .edit-container {
+  background-color: var(--very-lightgreen);
+  width: 700px;
+  height: 500px;
+  border-radius: 4px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.overlay .edit-container .text {
+  font-size: 20px;
+  font-weight: 500;
+  margin: 10px 0 15px 15px;
+}
+
+.overlay .edit-container form .form-container {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.overlay .edit-container form .form-container .upload-box{
+  margin-bottom: 20px;
+  width: 120px;
+  height: 100px;
+  overflow: hidden;
+  border: 3px dashed var(--darkgreen);
+  margin-left: 30px;
+
+  display: flex;
+ 
+  justify-content: center;
+  align-items: center;
+  
+  position: relative;
+}
+.overlay .edit-container form .form-container .inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.overlay .edit-container form .form-container .upload-box label {
+  position: absolute;
+  padding: 42px;
+  background-color: white;
+  text-align: center;
+}
+
+.overlay .edit-container form .form-container .inputs label {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgb(96, 96, 96);
+}
+
+.overlay .edit-container form .form-container .inputs input {
+  padding: 9px;
+  width: 180px;
+  height: 20px;
+  border-radius: 2px;
+  outline: none;
+  border: 1px solid rgb(186, 182, 182);
+  font-size: 14px;
+}
+
+.overlay .edit-container form .form-container .inputs .inp1{
+  margin-bottom: 10px;
+}
+
+#prod_desc {
+  margin-bottom: 10px;
+  border: 1px solid rgb(186, 182, 182);
+  font-size: 14px;
+  font-family: roboto, 'sans serif';
+  border-radius: 2px;
+  width: 450px;
+  outline: none;
+  padding: 5px;
+}
+
+.overlay .edit-container form .form-container .inputs .inp2{
+  margin-bottom: 10px;
+}
+
+#category {
+  width: 200px;
+  padding: 10px;
+  border-radius: 4px;
+  height: 40px;
+  border: 1px solid rgb(186, 182, 182);
+  font-size: 14px;
+  outline: none;
+}
+
+.btn-prod {
+  padding: 10px;
+  border: 2px solid var(--yellow);
+  background-color: var(--yellow);
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 5px;
+  margin-left: 530px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease-in-out;
+}
+.btn-prod:hover {
+  background-color: var(--darkyellow);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  
+}
+/* BACK BUTTON */
+.overlay .edit-container a {
+  text-decoration: none;
+  color: black;
+}
+.overlay .edit-container .back-btn{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: var(--btn-white);
+  border-radius: 3px;
+  margin-left: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.10);
+  transition: all .15s ease-in;
+}
+
+.overlay .edit-container .back-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  
+}
+
+/* REMOVING NUMBER SCROLL BAR */
+input[type="number"]::-webkit-outer-spin-button, 
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}

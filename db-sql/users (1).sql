@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 01, 2023 at 09:52 PM
+-- Generation Time: Dec 02, 2023 at 08:22 PM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -44,7 +44,10 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `pass`, `created_at`, `image`, `PhoneNo`, `users_Address`, `have_shop`) VALUES
-(131, 'rowel', 'rowel', '$2y$10$voLUjH6bmTnpju2VXoGHDOoyJcy831rMdSemWdFFneEh5PnvjPBSq', '2023-11-25 18:46:25', 'account-default-pic.jpg', 0, '', 0);
+(131, 'rowel', 'rowelpog@gmail.com', '$2y$10$Kr0/bG3EsBJHz7Ho/93B6er/Y9HcQCHEzbRnT1nm4UHJVwZZUnYz2', '2023-11-25 18:46:25', 'account-default-pic.jpg', 232414, 'ewqewqwqewq', 1),
+(141, 'lewor', 'lewor', '$2y$10$/K5vq1yg/JoRhHObvQ5CPuxwe4vqJDGTYl4bJ0/OXf0M8WOR3l.9m', '2023-12-02 15:52:27', 'IMG-656ae245cd8716.45652581.png', 0, '', 1),
+(142, 'rowels', 'rowels@gmail.com', '$2y$10$NjCIAEecDUJVgYp.K14/2OODjpLp5g/yv91Z3udI6tBlUaXbyMVaq', '2023-12-02 16:49:45', 'IMG-656aefb73ef029.66356297.jpg', 984512341, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
+(143, 'natsu', 'natsu321@dragneel.com', '$2y$10$elf7fQ1tyN.fsafS8AZ8AebeuG1h6t47i8bPB..Io4S7Lye/azwzi', '2023-12-03 03:07:31', 'IMG-656b8089c5eee9.99106153.jpg', 987654321, 'Everlasting street, San Pedro CSFP, Pampanga', 1);
 
 --
 -- Indexes for dumped tables
@@ -64,7 +67,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=141;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

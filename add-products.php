@@ -25,6 +25,8 @@
     foreach ($results as $row2){
     $users_shop_id = $row2["id"];
     }
+
+   
     
 
         if($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -140,7 +142,7 @@
                             <label for="category">Category</label>
                             <select id="category" name="category" >
                                 <option value="category">Category</option>
-                                <option value="Fresh-Produce">Fresh-Produce</option>
+                                <option value="Fresh Produce">Fresh Produce</option>
                                 <option value="Preserved Products">Preserved Products</option>
                                 <option value="Organic Products">Organic Products</option>
                                 <option value="Nuts and Seeds">Nuts and Seeds</option>

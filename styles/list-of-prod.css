@@ -39,14 +39,178 @@
 }
 /* END OF HEADER */
 /* MAIN */
+/* MAIN */
+
 .main {
-  height: 100vh;
+  height: calc(100vh - 60px);
   background-color: var(--dirty-white-bg);
+  margin-top: 60px;  
+  overflow-x: hidden;
 }
 
-.main .main-container {
-  height: 200px;
+.main .column-container {
   display: grid;
-  grid-template-rows: 1fr;
-  background-color: lightblue;
+  grid-template-columns: 300px 1fr;
 }
+/* MENU CONTAINER */
+.main .column-container .menu-container {
+  height: 100%;
+  background-color: var(--dirty-white-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main .column-container .menu-container .menu {
+ height: calc(100% - 40px);
+ background-color: #fff;
+ margin-right: 15px;
+ border-top-right-radius: 6px;
+ border-bottom-right-radius: 6px;
+}
+.main .column-container .menu-container .menu .link-tag {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main .column-container .menu-container .menu .link-tag a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  border-radius: 2px;
+}
+
+.main .column-container .menu-container .menu .link-tag a:hover {
+  background-color: var(--lightgreen);
+}
+
+/* RIGHT CONTAINER */
+
+/* UPPER RIGHT CONT */
+.main .column-container .prod_list_cont {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+  height: calc(100vh - 100px);
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 6px;
+  margin-right: 20px;
+  
+ 
+}
+
+.main .column-container .prod_list_cont .prod-table .container {
+  background-color: #fff;
+  height: 78px;
+  font-size: 18px;
+  font-weight: 500;
+  text-wrap: nowrap;
+  border-bottom: 1px solid var(--darkgreen);
+  border-top: 1px solid var(--darkgreen);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  
+
+}
+
+.main .column-container .prod_list_cont .prod-table .container .box{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 16vw;
+}
+
+/* PRODUCT LIST */
+.main .column-container .prod_list_cont .prod-list {
+  display: grid;
+  grid-template-rows: 125px;
+}
+
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg .prod-container{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-rows: 121px;
+  background-color: #fff;
+}
+
+/* IMAGE */
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .img {
+  width: 16vw;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .img .image-img {
+  width: 120px;
+  height: 110px;
+
+}
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .img .image-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  object-fit: cover;
+}
+/* PRODUCE NAME, PRICE, CATEGORY */
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .p-name,
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .p-price,
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .p-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400; 
+}
+
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .btn-action{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ACTION BUTTON */
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .btn-action .edit{
+  border-radius: 3px;
+  padding: 10px;
+  width: 75px;
+  border: 1px solid var(--yellow);
+  background-color: var(--yellow);
+  cursor: pointer;
+  transition: all 0.15s ease-in-out;
+  font-size: 14px;
+}
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .btn-action .edit:hover {
+  background-color: transparent;
+}
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg  .prod-container .btn-action .delete{
+  padding: 11px;
+  width: 76px;
+  border: none;
+  background-color: rgba(255, 0, 0, 0.608);
+  border-radius: 3px;
+  cursor: pointer;
+  margin-left: 13px;
+  transition: all 0.15s ease-in-out;
+}
+
+.main .column-container .prod_list_cont .prod-list .prod-cont-full-bg .prod-container .btn-action .delete:hover{
+  background-color: rgba(255, 0, 0, 0.999);
+  
+}
+
+
+
+
+
+
+
+
