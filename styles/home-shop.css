@@ -98,8 +98,8 @@
 }
 
 /* TWO CONTAINER */
-.main .container div:nth-child(1),
-.main .container div:nth-child(2){
+.main .container .upper,
+.main .container .bottom{
   background-color: #fff;
   border-radius: 6px;
 }
@@ -107,36 +107,40 @@
 /* 1st CONTAINER */
 
 /* IMAGE */
-.main .container div:nth-child(1) {
+.main .container .upper {
   margin-top: 20px;
   display: flex;
   align-items: center;
 }
-.main .container div:nth-child(1) .img-container {
+.main .container .upper .img-container {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   margin-left: 50px;
-
   margin-right: 15px;
+  
 }
 
 
 
-.main .container div:nth-child(1) .img-container img{
+.main .container .upper .img-container img{
   width: 190px;
   height: 180px;
   object-fit: cover;
   border-radius: 50%;
   border: 2px solid gray;
+
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload {
+.main .container .upper .img-container .buttonUpload {
   margin: 0;
   margin-top: 10px;
+  display: flex;
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload .box label {
+.main .container .upper .img-container .buttonUpload .box label {
   position: relative;
   cursor: pointer;
   width: 100px;
@@ -145,16 +149,16 @@
   background-color: rgb(240, 240, 240);
   border: none;
   line-height: 40px;
- 
+  padding: 31px;
   transition: all .15s ease-in-out;
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload .box input {
+.main .container .upper .img-container .buttonUpload .box input {
   position: absolute;
-  top: -30px;
-
 }
-.main .container div:nth-child(1) .img-container .buttonUpload .box {
+
+
+.main .container .upper .img-container .buttonUpload .box {
   border-radius: 4px;
   width: 100px;
   height: 40px;
@@ -167,12 +171,12 @@
   transition: all 0.15s ease-in-out;
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload .box:hover {
+.main .container .upper .img-container .buttonUpload .box:hover {
   opacity: 0.7;
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload button {
+.main .container .upper .img-container .buttonUpload button {
   width: 100px;
   height: 40px;
   font-size: 18px;
@@ -183,7 +187,7 @@
   transition: all 0.15s ease-in-out;
 }
 
-.main .container div:nth-child(1) .img-container .buttonUpload button:hover {
+.main .container .upper .img-container .buttonUpload button:hover {
   background-color: var(--darkyellow);
   box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.25);
 }
@@ -196,7 +200,7 @@
 
 
 /* TEXT */
-.main .container div:nth-child(1) .text-container {
+.main .container .upper .text-container {
   margin-left: 20px;
   margin-right: 60px;
   display: flex;
@@ -204,18 +208,18 @@
   align-items: start;
 }
 
-.main .container div:nth-child(1) .text-container .shop_name {
+.main .container .upper .text-container .shop_name {
   font-size: 40px;
   font-weight: 700;
   margin: 0;
   margin-bottom: 20px;
 }
 
-.main .container div:nth-child(1) .text-container .shop_description {
+.main .container .upper .text-container .shop_description {
   font-size: 18px;
 }
 
-.main .container div:nth-child(1) .text-container .description {
+.main .container .upper .text-container .description {
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
@@ -224,11 +228,11 @@
 
 }
 
-.main .container div:nth-child(1) .text-container .btn {
+.main .container .upper .text-container .btn {
   display: flex;
   justify-content: end;
 }
-.main .container div:nth-child(1) .text-container .btn .add-description {
+.main .container .upper .text-container .btn .add-description {
   margin-top: 17px;
   padding: 10px 12px;
   width: 200px;
@@ -240,7 +244,7 @@
   transition: all .15s ease-in-out;
 }
 
-.main .container div:nth-child(1) .text-container .add-description:hover {
+.main .container .upper .text-container .add-description:hover {
   background-color: transparent;
 }
 
@@ -254,6 +258,7 @@
   right: 0;
   background: rgba(0, 0, 0, 0.35);
   transform: scale(0);
+  z-index: 2000;
 }
 
 .overlay.active-edit-popup {
@@ -270,7 +275,7 @@
   width: 410px;
   height: 225px;
   border-radius: 4px;
-
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
 
   display: flex;
   flex-direction: column;
@@ -344,10 +349,69 @@
 }
 
 
+/* BOTTOM CONTAINER */
 
-
-.main .container div:nth-child(2) {
+.main .container .bottom  {
+  width: 100%;
   margin-bottom: 20px;
- 
-
 }
+
+.main .container .bottom {
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+
+.main .container .bottom .Order-stat {
+  font-size: 35px;
+  margin-top: 15px;
+  margin-left: 15px;
+  font-weight: 500;
+}
+
+.main .container .bottom .status-container {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 1fr repeat(3, 200px) 1fr;
+  justify-content: center;
+  grid-auto-rows: 180px;
+  gap: 20px;
+}
+
+.main .container .bottom .status-container .to-ship,
+.main .container .bottom .status-container .cancel,
+.main .container .bottom .status-container .return {
+  background-color: var(--lightgreen);
+  border-radius: 5px;
+  
+}
+
+.main .container .bottom .status-container .to-ship,
+.main .container .bottom .status-container .cancel,
+.main .container .bottom .status-container .return {
+  
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main .container .bottom .status-container .to-ship .to-ship-number,
+.main .container .bottom .status-container .cancel .cancel-number,
+.main .container .bottom .status-container .return .return-number {
+  font-size: 50px;
+  margin-bottom: 30px;
+  font-weight: 500;
+  color: black;
+}
+
+.main .container .bottom .status-container .to-ship .to-shipped,
+.main .container .bottom .status-container .cancel .cancelled,
+.main .container .bottom .status-container .return .returned
+ {
+  font-size: 20px;
+  margin-top: -20px;
+}
+
+
+

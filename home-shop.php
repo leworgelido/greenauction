@@ -36,14 +36,16 @@
                 <div class="menu">
                     <div class="link-tag">
                         <a href="home-shop.php">Home</a>
-                        <a href="add-products.php">My Products</a>
+                        <a href="add-products.php">Add Products</a>
+                        <a href="list-of-prod.php">List of Products</a>
+                        <a href="add-products.php">Orders</a>
                     </div>
                 </div>
 
 
             </div>
             <div class="container">
-                <div class="">
+                <div class="upper">
                     <div class="img-container">
                     <?php
                     $username = $_SESSION["username"];
@@ -72,7 +74,7 @@
                         <img src="<?php echo 'uploads/' . $row['shop_image'] ?>">
                         <?php
                     }
-                ?>
+                    ?>
 
                         <form action="uploading.php" method="post" enctype="multipart/form-data">
                             <div class="buttonUpload">
@@ -98,7 +100,25 @@
 
 
                 </div>
-                <div class=""></div>
+                <div class="bottom">
+                    <div class="Order-stat">Order Status</div>
+                    <div class="status-container">
+                        <div></div>
+                        <div class="to-ship">
+                            <div class="to-ship-number">0</div>
+                            <div class="to-shipped">To Ship</div>
+                        </div>
+                        <div class="cancel">
+                            <div class="cancel-number">0</div>
+                            <div class="cancelled">Cancelled</div>
+                        </div>
+                        <div class="return">
+                            <div class="return-number">0</div>
+                            <div class="returned">Returned</div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
             </div>
         </div>
         
@@ -112,7 +132,7 @@
             <form action="description.php" method="POST">
                 <textarea name="shop_descriptiontext" id="description-textarea" cols="40" rows="7"></textarea>
                 <div class="btn">
-                    <a href="add-product.php" class="back-btn">Back</a>
+                    <a href="home-shop.php" class="back-btn">Back</a>
                     <button class="btn-save" type="submit">Save</button>
                 </div>
                 
