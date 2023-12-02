@@ -28,7 +28,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/prof-setting.css">
+  <link rel="stylesheet" href="styles/prof-settings.css">
   <!-- title -->
     <title>Green Auction</title>
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">
@@ -36,7 +36,8 @@ session_start();
 <body>
   <div class="header">
     <div class="left-section">
-      <img src="./pictures/logo5.png" alt="">
+      <a href="home.php"><img src="./pictures/logo5.png" alt=""></a>
+      
     </div>
   </div>
 
@@ -122,10 +123,6 @@ session_start();
                       <input type="password" name="Confirm_pass" placeholder="Password">
                     </div>
                   </div>
-                  <div class="buttons2">
-                    <input type="submit" value="Save">
-                  </div>
-              </form>
                   <?php
                     if(isset($_GET['Success2'])){
                         echo '<div class="Username_Success2">' .$_GET['Success2']. '</div>';
@@ -136,15 +133,18 @@ session_start();
                         echo '<div class="Username_Error2">' .$_GET['Error2']. '</div>';
                       }
                   ?>
+                  <div class="buttons2">
+                    <input type="submit" value="Save">
+                    
+                </div>
+                  </div>
+              </form>
                   
           
         </div>
       
         
-        <div class="back">
-          <a href="home.php"><button>Back</button></a>
-          </div>
-        </div>
+        
       
       </div>
     </div>

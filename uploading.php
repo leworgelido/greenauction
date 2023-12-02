@@ -43,7 +43,7 @@
           move_uploaded_file($fileTmp, $FileUploadPath);
 
           
-          header("Location: add-product.php");
+          header("Location: home-shop.php");
 
         } else {
           $mes = "Your files size is too large!";

@@ -44,21 +44,64 @@
   height: calc(100vh - 60px);
   background-color: var(--dirty-white-bg);
   margin-top: 60px;  
+  overflow: hidden;
+}
+
+.main .column-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.main .column-container .menu-container {
+  height: 100%;
+  background-color: var(--dirty-white-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main .column-container .menu-container .menu {
+ height: calc(100% - 40px);
+ background-color: #fff;
+ margin-right: 15px;
+ border-top-right-radius: 6px;
+ border-bottom-right-radius: 6px;
+}
+
+.main .column-container .menu-container .menu .link-tag {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main .column-container .menu-container .menu .link-tag a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  border-radius: 2px;
+}
+
+.main .column-container .menu-container .menu .link-tag a:hover {
+  background-color: var(--lightgreen);
 }
 
 .main .container {
   display: grid;
-  grid-template-rows: 300px 230px 1fr;
+  grid-template-rows: 300px 1fr;
   gap: 10px;
   height: calc(100vh - 60px);
-  
 }
 
-/* THREE CONTAINER */
+/* TWO CONTAINER */
 .main .container div:nth-child(1),
-.main .container div:nth-child(2),
-.main .container div:nth-child(3){
+.main .container div:nth-child(2){
   background-color: #fff;
+  border-radius: 6px;
 }
 
 /* 1st CONTAINER */
@@ -154,27 +197,31 @@
 
 /* TEXT */
 .main .container div:nth-child(1) .text-container {
-  height: 100%;
   margin-left: 20px;
   margin-right: 60px;
   display: flex;
   flex-direction: column;
+  align-items: start;
 }
 
 .main .container div:nth-child(1) .text-container .shop_name {
   font-size: 40px;
   font-weight: 700;
+  margin: 0;
+  margin-bottom: 20px;
 }
 
 .main .container div:nth-child(1) .text-container .shop_description {
+  font-size: 18px;
 }
 
 .main .container div:nth-child(1) .text-container .description {
-  margin-top: 15px;
   text-transform: uppercase;
   font-size: 16px;
   font-weight: 500;
   color: rgb(96, 96, 96);
+  margin: 0;
+
 }
 
 .main .container div:nth-child(1) .text-container .btn {
@@ -182,7 +229,7 @@
   justify-content: end;
 }
 .main .container div:nth-child(1) .text-container .btn .add-description {
-  
+  margin-top: 17px;
   padding: 10px 12px;
   width: 200px;
   font-size: 16px;
@@ -300,10 +347,7 @@
 
 
 .main .container div:nth-child(2) {
+  margin-bottom: 20px;
  
 
-}
-
-.main .container div:nth-child(3) {
-  margin-bottom: 20px;
 }

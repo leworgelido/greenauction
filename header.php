@@ -32,7 +32,7 @@ session_start();
             
           } else {
             $mes = "Go to your Shop";
-            $loc = "add-product.php";
+            $loc = "home-shop.php";
           }
 
           $pdo = null;

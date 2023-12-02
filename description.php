@@ -24,7 +24,7 @@
           $stmt->bindParam(":id", $id);
           $stmt->execute();
         
-          header("Location: add-product.php");
+          header("Location: home-shop.php");
         
         }
        catch (PDOException $e) {

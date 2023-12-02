@@ -64,7 +64,8 @@
 <body>
   <div class="header">
     <div class="left-section">
-      <img src="./pictures/logo5.png" alt="">
+      <a href="home.php"><img src="./pictures/logo5.png" alt=""></a>
+      
     </div>
   </div>
 

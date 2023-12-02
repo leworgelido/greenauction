@@ -1,0 +1,111 @@
+:root {
+  --very-lightgreen: #D0E7D2;
+  --darkgreen: #618264;
+  --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;
+  --dirty-white-bg: rgb(247, 245, 245);
+  --btn-white: rgb(240, 240, 240);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--lightgreen);
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .left-section {
+  height: 100%;
+  width: fit-content;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left-section img {
+  width: fit-content;
+  height: 45px;
+}
+/* END OF HEADER */
+
+/* MAIN */
+
+.main {
+  height: calc(100vh - 60px);
+  background-color: var(--dirty-white-bg);
+  margin-top: 60px;  
+  overflow: hidden;
+}
+
+.main .column-container {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+/* MENU CONTAINER */
+.main .column-container .menu-container {
+  height: 100%;
+  background-color: var(--dirty-white-bg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.main .column-container .menu-container .menu {
+ height: calc(100% - 40px);
+ background-color: #fff;
+ margin-right: 15px;
+ border-top-right-radius: 6px;
+ border-bottom-right-radius: 6px;
+}
+.main .column-container .menu-container .menu .link-tag {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main .column-container .menu-container .menu .link-tag a{
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  padding: 10px;
+  text-align: center;
+  transition: all 0.15s ease-in-out;
+  border-radius: 2px;
+}
+
+.main .column-container .menu-container .menu .link-tag a:hover {
+  background-color: var(--lightgreen);
+}
+/* RIGHT CONTAINER */
+.main .column-container .add-product-container {
+  display: grid;
+  grid-template-rows: 300px 1fr;
+  gap: 10px;
+  height: calc(100vh - 60px);
+  
+}
+
+.main .column-container .add-product-container div:first-child{
+  background-color: #fff;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.main .column-container .add-product-container div:nth-child(2){
+  background-color: #fff;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
