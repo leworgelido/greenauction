@@ -7,8 +7,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/products.css"> 
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/product.css"> 
     
   <!-- title -->
     <title>Green Auction</title>
@@ -17,6 +17,7 @@
 <body>
   <!-- start -->
     <?php
+  
       include_once 'header.php';
     ?>
 
@@ -81,8 +82,55 @@
 
       <div class="discoveries-section">
         <div class="daily-disco">Daily Discoveries</div>
-      </div>
+        <div class="random-products">
+          <div class="cate-all-products">
+          <?php
+            require './database/connect.php';
+               $username = $_SESSION["username"];
+               $display = $_SESSION["display"];
 
+       
+                      $qry = "SELECT * FROM users_products WHERE display_prod = :id";
+                      $stmt = $pdo->prepare($qry);
+                      $stmt->bindParam(":id", $display);
+                      $stmt->execute();
+
+                      $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                        
+                        foreach ($results as $row3){
+                        $image = $row3["image_product"];
+
+                    ?>
+
+            
+              <a href="" class="link-prod">
+                <div class="products-container">
+                  <div class="image-cont">
+                    <img src="./uploads/<?php echo $image;?>" alt="">
+                  </div>
+                  <div class="text">
+                    <div class="prod-name"><?php echo $row3["prod_name"];?></div>
+                    <div class="price-cart">
+                      <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
+                      <form action="" method="POST">
+                        <button class="btn-add-cart"><img src="./pictures/add-to-cart-logo.png" alt=""></button>
+                        <input type="hidden" name="product_id" value="">
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </a>
+
+
+              <?php
+            }
+               
+            ?>
+            </div>
+          </div>
+      </div>
   </div>
+
+
 </body>
 </html>

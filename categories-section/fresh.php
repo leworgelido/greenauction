@@ -102,7 +102,7 @@
                   <img src="../uploads/<?php echo $image;?>" alt="">
                 </div>
                 <div class="text">
-                  <div class="prod-name"><?php echo $row3["prod_name"];?>k</div>
+                  <div class="prod-name"><?php echo $row3["prod_name"];?></div>
                   <div class="price-cart">
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
                     <form action="" method="POST">
