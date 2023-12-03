@@ -37,43 +37,43 @@
      
       <div class="category-section">
 
-            <a href="">
+            <a href="./categories-section/fresh.php">
               <div class="">Fresh Produce</div>
               <img src="./pictures/fresh-produce.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/preserved.php">
               <div class="">Preserved Products</div>
               <img src="./pictures/preserved.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/organic.php">
               <div class="">Organic Products</div>
               <img src="./pictures/organic.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/nuts.php">
               <div class="">Nuts and Seeds</div>
               <img src="./pictures/nuts.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/herbs.php">
               <div class="">Herbs and Spices</div>
               <img src="./pictures/herbs.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/honey.php">
               <div class="">Honey and Bee Products</div>
               <img src="./pictures/honey.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/specialty.php">
               <div class="">Specialty Products</div>
               <img src="./pictures/specialty.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/flowers.php">
               <div class="">Flowers and Plants</div>
               <img src="./pictures/plants.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/homemade.php">
               <div class="">Homemade Products</div>
               <img src="./pictures/homemade.png" alt="">
             </a>
-            <a href="">
+            <a href="./categories-section/seasonal.php">
               <div class="">Seasonal Items</div>
               <img src="./pictures/seasonal.png" alt="">
             </a>

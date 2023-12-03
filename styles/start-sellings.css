@@ -246,3 +246,16 @@ a {
 .overlay .success-container .btn-ok:hover {
   opacity: 0.7;
 }
+
+/* ERROR DESIGN */
+
+.error {
+  background-color: var(--error-mes-bg);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 4px;
+  color: var(--error-mes-txt);
+  margin-bottom: 12px;
+  text-align: center;
+
+}

@@ -55,7 +55,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles/reset.css">
-  <link rel="stylesheet" href="styles/acc-setting.css">
+  <link rel="stylesheet" href="styles/acc-settings.css">
   <!-- title -->
     <title>Green Auction</title>
     <link rel="icon" type="image/x-icon" href="pictures/favicon2.ico">

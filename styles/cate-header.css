@@ -1,0 +1,40 @@
+:root {
+  --very-lightgreen: #D0E7D2;
+  --darkgreen: #618264;
+  --lightgreen: #B0D9B1;
+  --whitegreen: #f5f9f0;
+  --yellow: rgb(245, 245, 59);
+  --darkyellow: rgb(232, 232, 6);
+  --error-mes-bg: #F2DEDE;
+  --error-mes-txt: #A94442;
+  --success-mes-bg: #D4EDDA;
+  --success-mes-txt: #40754C;
+  --dirty-white-bg: rgb(247, 245, 245);
+  --btn-white: rgb(240, 240, 240);
+}
+
+/* HEADER */
+.header {
+  background-color: var(--lightgreen);
+  height: 60px;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.header .left-section {
+  height: 100%;
+  width: fit-content;
+  margin-left: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header .left-section img {
+  width: fit-content;
+  height: 45px;
+}
+/* END OF HEADER */

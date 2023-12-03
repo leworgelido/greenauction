@@ -10,6 +10,8 @@ session_start();
   require_once './database/connect.php';
 
   $username = $_SESSION["username"];
+  $_SESSION["display"] = 1;
+  $display = $_SESSION["display"];
   
 
   try{

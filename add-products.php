@@ -3,6 +3,7 @@
     require_once 'database/connect.php';
 
     $username = $_SESSION["username"];
+    $display = $_SESSION["display"];
 
     $qry = "SELECT * FROM users WHERE username = :username";
     $stmt = $pdo->prepare($qry);
@@ -47,7 +48,7 @@
               if($fileSize < 125000){
   
                 $NewFileName = uniqid("PRODUCT-IMG-",true) . '.'. $file_ex_lc;
-                $qry = "INSERT INTO users_products (image_product, prod_name, prod_description, prod_price, prod_category, users_shop_id) VALUES (:image_product, :prod_name, :prod_description, :prod_price, :prod_category, :users_shop_id)";
+                $qry = "INSERT INTO users_products (image_product, prod_name, prod_description, prod_price, prod_category, users_shop_id, display_prod) VALUES (:image_product, :prod_name, :prod_description, :prod_price, :prod_category, :users_shop_id, :display)";
   
                 $stmt= $pdo->prepare($qry);
                 $stmt->bindParam(":image_product", $NewFileName);
@@ -56,6 +57,7 @@
                 $stmt->bindParam(":prod_price", $prod_price);
                 $stmt->bindParam(":prod_category", $category);
                 $stmt->bindParam(":users_shop_id", $users_shop_id);
+                $stmt->bindParam(":display", $display);
                 $stmt->execute();
   
                 $FileUploadPath = 'uploads/' . $NewFileName;

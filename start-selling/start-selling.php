@@ -99,7 +99,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles/reset.css">
-    <link rel="stylesheet" href="../styles/start-selling.css"> 
+    <link rel="stylesheet" href="../styles/start-sellings.css"> 
     
   <!-- title -->
     <title>Green Auction</title>
