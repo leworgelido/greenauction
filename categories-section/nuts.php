@@ -48,7 +48,6 @@
           <div class="cate-all-products">
             
             <?php
-            session_start();
             require_once '../database/connect.php';
             $display = $_SESSION["display"];
             $username = $_SESSION["username"];
@@ -86,6 +85,7 @@
                         foreach ($results as $row3){
                         $image = $row3["image_product"];
                         $pcategory = $row3["prod_category"];
+                        $users_shop = $row3["users_shop_id"];
                         $p_id = $row3["id"];
 
                         $link = "../prod-info.php?id=$p_id";
@@ -105,9 +105,10 @@
                   <div class="prod-name"><?php echo $row3["prod_name"];?></div>
                   <div class="price-cart">
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
-                    <form action="" method="POST">
+                    <form action="add-to-cart-function.php?id=<?php echo $id;?>&users_shop_id=<?php echo $users_shop?>" method="POST">
                       <button class="btn-add-cart"><img src="../pictures/add-to-cart-logo.png" alt=""></button>
-                      <input type="hidden" name="product_id" value="">
+                      <input type="hidden" name="product_id" value="<?php echo $row3["id"];?>">
+                      <input type="hidden" name="page" value="nuts">
                     </form>
                   </div>
                 </div>

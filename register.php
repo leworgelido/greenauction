@@ -51,6 +51,26 @@ session_start();
         $result->bindParam(":have_shop", $have_shop);
         $result->execute();
 
+          $qry = "SELECT * FROM users WHERE username = :username";
+          $stmt = $pdo->prepare($qry);
+          $stmt->bindParam(":username", $username);
+          $stmt->execute();
+
+          $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+          foreach($results as $row){
+            $id = $row["id"];
+          }
+
+            $cart = 0;
+
+            $qry = "INSERT INTO add_cart (cart, users_id) VALUES (:cart, :users_id)";
+            $result = $pdo->prepare($qry);
+            
+            $result->bindParam(":cart", $cart);
+            $result->bindParam(":users_id", $id);
+            $result->execute();
+
         header("location: index.php");
         die();
       }

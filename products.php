@@ -104,8 +104,7 @@
                         $link = "./prod-info.php?id=$p_id";
 
                     ?>
-
-            
+                    
               <a href="<?php echo $link;?>" class="link-prod">
                 <div class="products-container">
                   <div class="image-cont">
@@ -123,8 +122,6 @@
                   </div>
                 </div>
               </a>
-
-
               <?php
             }
                

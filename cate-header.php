@@ -23,7 +23,36 @@
       <a href="../add-to-cart.php" class="add-to-cart">
         <img src="../pictures/add-to-cart-logo.png" alt="">
       </a>
-      <div class="add-num">0</div>
+      <?php
+        session_start();
+        require_once '../database/connect.php';
+        $username = $_SESSION["username"];
+
+          $qry = "SELECT * FROM users WHERE username = :username";
+          $stmt = $pdo->prepare($qry);
+
+          $stmt->bindParam(":username", $username);
+          $stmt->execute();
+
+          $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+          foreach($result as $row){
+            $id = $row["id"];
+          }
+
+               $qry = "SELECT * FROM add_cart WHERE users_id = :id";
+               $stmt = $pdo->prepare($qry);
+               $stmt->bindParam(":id",$id);
+               $stmt->execute();
+
+               $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+               foreach($result as $row){
+                 $cart = $row["cart"];
+               }
+              ?>
+      <div class="add-num"><?php echo $cart?></div>
     </div>
     </div>
 </body>

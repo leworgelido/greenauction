@@ -7,12 +7,14 @@ session_start();
     exit; 
   }
 
-  require_once './database/connect.php';
+  
 
   $username = $_SESSION["username"];
   
 
   try{
+              
+    require_once './database/connect.php';
           $qry = "SELECT * FROM users WHERE username = :username";
           $stmt = $pdo->prepare($qry);
 
@@ -23,8 +25,8 @@ session_start();
 
           foreach($result as $row){
             $have_shop = $row["have_shop"];
+            $id = $row["id"];
           }
-
           if($have_shop === 0) {
             $mes = "Start Selling";
             $loc = "./start-selling/start-selling.php";
@@ -35,8 +37,7 @@ session_start();
             $loc = "home-shop.php";
           }
 
-          $pdo = null;
-          $stmt = null;
+         
   }  catch (PDOException $error) {
     echo $error->getMessage();  
   }
@@ -79,6 +80,7 @@ session_start();
                       ?>
                       <img src="<?php echo 'uploads/' . $row['image']?>"> <?php
                     } 
+
                   ?>
                 </button>
               </div>
@@ -88,7 +90,22 @@ session_start();
                   <img src="./pictures/add-to-cart-logo.png" alt="">
                 </a>
               </div>
-              <div class="add-num">0</div>
+              <?php
+               $qry = "SELECT * FROM add_cart WHERE users_id = :id";
+               $stmt = $pdo->prepare($qry);
+               $stmt->bindParam(":id",$id);
+               $stmt->execute();
+
+               $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+
+               foreach($result as $row){
+                 $cart = $row["cart"];
+               }
+               
+
+              ?>
+              <div class="add-num"><?php echo $cart?></div>
           </ul>
       </div>
 

@@ -48,7 +48,6 @@
           <div class="cate-all-products">
             
             <?php
-            session_start();
             require_once '../database/connect.php';
             $display = $_SESSION["display"];
             $username = $_SESSION["username"];
@@ -105,9 +104,11 @@
                   <div class="prod-name"><?php echo $row3["prod_name"];?></div>
                   <div class="price-cart">
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
-                    <form action="" method="POST">
+                    <form action="add-to-cart-function.php" method="POST">
                       <button class="btn-add-cart"><img src="../pictures/add-to-cart-logo.png" alt=""></button>
-                      <input type="hidden" name="product_id" value="">
+                      <input type="hidden" name="product_id" value="<?php echo $row3["id"];?>">
+                      <input type="hidden" name="page" value="seasonal">
+
                     </form>
                   </div>
                 </div>

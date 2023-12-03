@@ -49,7 +49,7 @@
           <div class="cate-all-products">
             
             <?php
-            session_start();
+           
             require_once '../database/connect.php';
             $username = $_SESSION["username"];
             $display = $_SESSION["display"];
@@ -78,8 +78,6 @@
                     $users_shop_id = $row2["id"];
                     }
 
-
-
                       $qry = "SELECT * FROM users_products WHERE display_prod = :id";
                       $stmt = $pdo->prepare($qry);
                       $stmt->bindParam(":id", $display);
@@ -91,13 +89,11 @@
                         $image = $row3["image_product"];
                         $pcategory = $row3["prod_category"];
                         $p_id = $row3["id"];
+                        $users_shop = $row3["users_shop_id"];
 
                         $link = "../prod-info.php?id=$p_id";
 
-                        if($fresh === $pcategory){
-
-                        
-                        
+                        if($fresh === $pcategory){ 
                     ?>
 
                  
@@ -110,9 +106,10 @@
                   <div class="prod-name"><?php echo $row3["prod_name"];?></div>
                   <div class="price-cart">
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
-                    <form action="add-to-cart-function.php" method="POST">
+                    <form action="add-to-cart-function.php?id=<?php echo $id;?>&users_shop_id=<?php echo $users_shop?>" method="POST">
                       <button class="btn-add-cart"><img src="../pictures/add-to-cart-logo.png" alt=""></button>
-                      <input type="hidden" name="product_id" value="<?php echo $row3["id"];?>">
+                      <input type="hidden" name="product_id" value="<?php echo $p_id;?>">
+                      <input type="hidden" name="page" value="fresh">
                     </form>
                   </div>
                 </div>
