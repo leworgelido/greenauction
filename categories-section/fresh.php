@@ -19,6 +19,7 @@
     <?php
       include_once '../cate-header.html';
     ?>
+
     <div class="main">
       <div class="cate-menu">
         <div class="cate-text">Categories</div>
@@ -89,14 +90,18 @@
                         foreach ($results as $row3){
                         $image = $row3["image_product"];
                         $pcategory = $row3["prod_category"];
+                        $p_id = $row3["id"];
+
+                        $link = "../prod-info.php?id=$p_id";
 
                         if($fresh === $pcategory){
 
                         
                         
                     ?>
-           
-            <a href="" class="link-prod">
+
+                 
+            <a href="<?php echo $link;?>" class="link-prod">
               <div class="products-container">
                 <div class="image-cont">
                   <img src="../uploads/<?php echo $image;?>" alt="">
@@ -107,7 +112,7 @@
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
                     <form action="" method="POST">
                       <button class="btn-add-cart"><img src="../pictures/add-to-cart-logo.png" alt=""></button>
-                      <input type="hidden" name="product_id" value="">
+                      <input type="hidden" name="product_id" value="<?php echo $row3["id"];?>">
                     </form>
                   </div>
                 </div>

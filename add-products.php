@@ -151,7 +151,7 @@
                                 <option value="Herbs and Spices">Herbs and Spices</option>
                                 <option value="Honey and Bee Products">Honey and Bee Products</option>
                                 <option value="Specialty Products">Specialty Products</option>
-                                <option value="Flower and Plants">Flower and Plants</option>
+                                <option value="Flowers and Plants">Flowers and Plants</option>
                                 <option value="Homemade Products">Homemade Products</option>
                                 <option value="Seasonal Items">Seasonal Items</option>
                             </select>

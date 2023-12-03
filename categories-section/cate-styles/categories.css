@@ -21,6 +21,7 @@ a {
 /* MAIN */
 .main {
   height: calc(100vh - 60px);
+  padding-top: 60px;
   background-color: var(--dirty-white-bg);
   display: grid;
   grid-template-columns: 215px 1fr;

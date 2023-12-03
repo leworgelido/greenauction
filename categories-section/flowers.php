@@ -52,7 +52,8 @@
             require_once '../database/connect.php';
             $username = $_SESSION["username"];
             $display = $_SESSION["display"];
-            $flowers = "Flower and Plants";
+
+            $flowers = "Flowers and Plants";
 
                 $qry = "SELECT * FROM users WHERE username = :username";
                 $stmt = $pdo->prepare($qry);
@@ -76,6 +77,8 @@
                     $users_shop_id = $row2["id"];
                     }
 
+
+
                       $qry = "SELECT * FROM users_products WHERE display_prod = :id";
                       $stmt = $pdo->prepare($qry);
                       $stmt->bindParam(":id", $display);
@@ -86,6 +89,9 @@
                         foreach ($results as $row3){
                         $image = $row3["image_product"];
                         $pcategory = $row3["prod_category"];
+                        $p_id = $row3["id"];
+
+                        $link = "../prod-info.php?id=$p_id";
 
                         if($flowers === $pcategory){
 
@@ -93,7 +99,7 @@
                         
                     ?>
            
-            <a href="" class="link-prod">
+            <a href="<?php echo $link;?>" class="link-prod">
               <div class="products-container">
                 <div class="image-cont">
                   <img src="../uploads/<?php echo $image;?>" alt="">

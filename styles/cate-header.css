@@ -22,6 +22,9 @@
   position: fixed;
   top: 0;
   left: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .header .left-section {
@@ -38,3 +41,34 @@
   height: 45px;
 }
 /* END OF HEADER */
+
+
+.header .right-section {
+  width: 100%;
+  height: 100%;
+  margin-left: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .right-section .add-to-cart {
+  margin-right: 60px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.header .right-section .add-to-cart img {
+  width: 100%;
+  height: 100%;
+  border-radius: 25px;
+  object-fit: cover;
+}
+
+.header .right-section .add-to-cart:hover {
+  opacity: 0.8;
+}

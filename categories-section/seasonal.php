@@ -86,6 +86,9 @@
                         foreach ($results as $row3){
                         $image = $row3["image_product"];
                         $pcategory = $row3["prod_category"];
+                        $p_id = $row3["id"];
+
+                        $link = "../prod-info.php?id=$p_id";
 
                         if($seasonal === $pcategory){
 
@@ -93,7 +96,7 @@
                         
                     ?>
            
-            <a href="" class="link-prod">
+            <a href="<?php echo $link;?>" class="link-prod">
               <div class="products-container">
                 <div class="image-cont">
                   <img src="../uploads/<?php echo $image;?>" alt="">
