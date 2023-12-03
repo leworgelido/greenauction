@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 02, 2023 at 08:22 PM
+-- Generation Time: Dec 03, 2023 at 10:37 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -47,7 +47,10 @@ INSERT INTO `users` (`id`, `username`, `email`, `pass`, `created_at`, `image`, `
 (131, 'rowel', 'rowelpog@gmail.com', '$2y$10$Kr0/bG3EsBJHz7Ho/93B6er/Y9HcQCHEzbRnT1nm4UHJVwZZUnYz2', '2023-11-25 18:46:25', 'account-default-pic.jpg', 232414, 'ewqewqwqewq', 1),
 (141, 'lewor', 'lewor', '$2y$10$/K5vq1yg/JoRhHObvQ5CPuxwe4vqJDGTYl4bJ0/OXf0M8WOR3l.9m', '2023-12-02 15:52:27', 'IMG-656ae245cd8716.45652581.png', 0, '', 1),
 (142, 'rowels', 'rowels@gmail.com', '$2y$10$NjCIAEecDUJVgYp.K14/2OODjpLp5g/yv91Z3udI6tBlUaXbyMVaq', '2023-12-02 16:49:45', 'IMG-656aefb73ef029.66356297.jpg', 984512341, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
-(143, 'natsu', 'natsu321@dragneel.com', '$2y$10$elf7fQ1tyN.fsafS8AZ8AebeuG1h6t47i8bPB..Io4S7Lye/azwzi', '2023-12-03 03:07:31', 'IMG-656b8089c5eee9.99106153.jpg', 987654321, 'Everlasting street, San Pedro CSFP, Pampanga', 1);
+(143, 'natsu', 'natsu321@dragneel.com', '$2y$10$elf7fQ1tyN.fsafS8AZ8AebeuG1h6t47i8bPB..Io4S7Lye/azwzi', '2023-12-03 03:07:31', 'IMG-656b8089c5eee9.99106153.jpg', 987654321, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
+(144, '321rowel', 'rowel@gmail.com', '$2y$10$h9GoWK25xYgtO2mfweIsSO50j9.7hafPn1xM4wpjYsxN5SPcmGiXG', '2023-12-03 17:17:42', 'IMG-656c4911d50ff6.69176245.jpg', 98576124, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
+(145, 'cxz', 'cxz', '$2y$10$W1FkY8hrJAdZ8qFvlRgfUuZyYSzVjJEgqANsS6/3fSCc4OF7N8NhS', '2023-12-03 17:27:14', 'account-default-pic.jpg', 0, '', 1),
+(146, 'zxc', 'zxc', '$2y$10$oIjszSb.BBtf7Giq6kufcOM4miA.KAbOZuTXd2966IMJoRirxZsVW', '2023-12-03 17:33:41', 'account-default-pic.jpg', 0, '', 0);
 
 --
 -- Indexes for dumped tables
@@ -67,7 +70,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=144;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=147;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
