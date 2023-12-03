@@ -9,7 +9,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles/reset.css">
-  <link rel="stylesheet" href="../styles/cate-header.css">
+  <link rel="stylesheet" href="../styles/cate-headerr.css">
   <link rel="stylesheet" href="./cate-styles/categories.css">
   <!-- title -->
     <title>Green Auction</title>
@@ -17,7 +17,7 @@
 </head>
 <body>
     <?php
-      include_once '../cate-header.html';
+      include_once '../cate-header.php';
     ?>
 
     <div class="main">
@@ -110,7 +110,7 @@
                   <div class="prod-name"><?php echo $row3["prod_name"];?></div>
                   <div class="price-cart">
                     <div class="prod-price">₱ <?php echo $row3["prod_price"];?></div>
-                    <form action="" method="POST">
+                    <form action="add-to-cart-function.php" method="POST">
                       <button class="btn-add-cart"><img src="../pictures/add-to-cart-logo.png" alt=""></button>
                       <input type="hidden" name="product_id" value="<?php echo $row3["id"];?>">
                     </form>

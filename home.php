@@ -57,7 +57,7 @@ session_start();
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Agbalumo&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/reset.css">
-    <link rel="stylesheet" href="styles/home.css"> 
+    <link rel="stylesheet" href="styles/homee.css"> 
     
   <!-- title -->
     <title>Green Auction</title>
@@ -96,11 +96,11 @@ session_start();
               </div>
                 
               <div class="AddCart">
-                <a href="" class="add-to-cart">
+                <a href="add-to-cart.php" class="add-to-cart">
                   <img src="./pictures/add-to-cart-logo.png" alt="">
                 </a>
               </div>
-                
+              <div class="add-num">0</div>
           </ul>
       </div>
 

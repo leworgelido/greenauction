@@ -50,7 +50,7 @@ session_start();
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./styles/reset.css">
-  <link rel="stylesheet" href="./styles/header.css">
+  <link rel="stylesheet" href="./styles/headerr.css">
   <title>Document</title>
 </head>
 <body>
@@ -84,11 +84,11 @@ session_start();
               </div>
                 
               <div class="AddCart">
-                <a href="" class="add-to-cart">
+                <a href="add-to-cart.php" class="add-to-cart">
                   <img src="./pictures/add-to-cart-logo.png" alt="">
                 </a>
               </div>
-                
+              <div class="add-num">0</div>
           </ul>
       </div>
 

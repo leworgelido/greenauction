@@ -11,7 +11,10 @@
   --success-mes-txt: #40754C;;
   --yellowhover: rgba(255, 255, 0, 0.459);
 }
-
+a {
+  text-decoration: none;
+  color: black;
+}
 /* PRODUCTS SECTION */
 
 

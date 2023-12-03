@@ -84,7 +84,7 @@ session_start();
               </div>
                 
               <div class="AddCart">
-                <a href="" class="add-to-cart">
+                <a href="add-to-cart.php" class="add-to-cart">
                   <img src="../pictures/add-to-cart-logo.png" alt="">
                 </a>
               </div>

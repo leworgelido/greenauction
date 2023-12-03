@@ -351,5 +351,19 @@ span {
  height: 150px;
 }
 
+/* add num to cart */
+
+.add-num {
+  border: 1px solid var(--darkgreen);
+  text-align: center;
+  background-color: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: 2px;
+  right: 58px;
+}
+
 
 
