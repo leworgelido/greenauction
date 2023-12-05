@@ -1,0 +1,57 @@
+.main {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.main .content {
+  width: 350px;
+  height: 170px;
+  background-color: #fff;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 2px;
+
+  display: grid;
+  grid-template-rows: 80px 1fr;
+}
+
+
+.main .content .text-cont {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  margin-bottom: 10px;
+}
+.main .content .text-cont .text {
+  font-size: 18px;
+  color: #1e1e1e;
+  font-weight: 500;
+  text-align: center;
+}
+
+.main .content .btn-cont {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+.main .content .btn-cont .btn-yes,
+.main .content .btn-cont .btn-no
+  {
+  font-size: 16px;
+  margin-right: 10px;
+  width: 80px;
+  height: 35px;
+  background-color: #1e1e1e;
+  color: #fff;
+  border: 1px solid #1e1e1e;
+  transition: all 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.main .content .btn-cont .btn-yes:hover,
+.main .content .btn-cont .btn-no:hover {
+  background-color: transparent;
+  color: #1e1e1e;
+}

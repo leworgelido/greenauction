@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 03, 2023 at 11:36 PM
+-- Generation Time: Dec 05, 2023 at 02:05 AM
 -- Server version: 10.4.28-MariaDB
 -- PHP Version: 8.2.4
 
@@ -33,12 +33,37 @@ CREATE TABLE `add_cart` (
   `users_id` int(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `add_cart`
+-- Table structure for table `admin_tbl`
 --
 
-INSERT INTO `add_cart` (`id`, `cart`, `users_id`) VALUES
-(1, 1, 149);
+CREATE TABLE `admin_tbl` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `passWord` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin_tbl`
+--
+
+INSERT INTO `admin_tbl` (`id`, `username`, `passWord`) VALUES
+(1, 'admin', 'admin');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `audit_trail`
+--
+
+CREATE TABLE `audit_trail` (
+  `id` int(11) NOT NULL,
+  `action` varchar(255) NOT NULL,
+  `user` varchar(255) NOT NULL,
+  `timestamp` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
 
@@ -63,16 +88,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `pass`, `created_at`, `image`, `PhoneNo`, `users_Address`, `have_shop`) VALUES
-(131, 'rowel', 'rowelpog@gmail.com', '$2y$10$Kr0/bG3EsBJHz7Ho/93B6er/Y9HcQCHEzbRnT1nm4UHJVwZZUnYz2', '2023-11-25 18:46:25', 'account-default-pic.jpg', 232414, 'ewqewqwqewq', 1),
-(141, 'lewor', 'lewor', '$2y$10$/K5vq1yg/JoRhHObvQ5CPuxwe4vqJDGTYl4bJ0/OXf0M8WOR3l.9m', '2023-12-02 15:52:27', 'IMG-656ae245cd8716.45652581.png', 0, '', 1),
-(142, 'rowels', 'rowels@gmail.com', '$2y$10$NjCIAEecDUJVgYp.K14/2OODjpLp5g/yv91Z3udI6tBlUaXbyMVaq', '2023-12-02 16:49:45', 'IMG-656aefb73ef029.66356297.jpg', 984512341, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
-(143, 'natsu', 'natsu321@dragneel.com', '$2y$10$elf7fQ1tyN.fsafS8AZ8AebeuG1h6t47i8bPB..Io4S7Lye/azwzi', '2023-12-03 03:07:31', 'IMG-656b8089c5eee9.99106153.jpg', 987654321, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
-(144, '321rowel', 'rowel@gmail.com', '$2y$10$h9GoWK25xYgtO2mfweIsSO50j9.7hafPn1xM4wpjYsxN5SPcmGiXG', '2023-12-03 17:17:42', 'IMG-656c4911d50ff6.69176245.jpg', 98576124, 'Everlasting street, San Pedro CSFP, Pampanga', 1),
-(145, 'cxz', 'cxz', '$2y$10$W1FkY8hrJAdZ8qFvlRgfUuZyYSzVjJEgqANsS6/3fSCc4OF7N8NhS', '2023-12-03 17:27:14', 'account-default-pic.jpg', 0, '', 1),
-(146, 'zxc', 'zxc', '$2y$10$oIjszSb.BBtf7Giq6kufcOM4miA.KAbOZuTXd2966IMJoRirxZsVW', '2023-12-03 17:33:41', 'account-default-pic.jpg', 0, '', 0),
-(147, '4321', '4321', '$2y$10$xhf/nWi5I.XO93o0upy3Dega3iXURXeikCoM.vuI1uTD/f.VKmXNi', '2023-12-03 18:19:12', 'account-default-pic.jpg', 0, '', 0),
-(148, 'mnb', 'mnb', '$2y$10$Uc32g1n62V5N/zvHI20QK.QaZYMikxSReUAC.HY5wbmwYGYuJ6LYi', '2023-12-04 01:49:08', 'account-default-pic.jpg', 0, '', 0),
-(149, '41', '41#gmail,com', '$2y$10$f.pjtgttNKiVaGqba0h28ueeM11P3HZnzj63u31eaH2mowy7.FIkO', '2023-12-04 01:49:47', 'IMG-656cc3c7a34841.70708442.jpg', 985712, 'pampangaa', 0);
+(131, 'rowel', 'rowelpog@gmail.com', '$2y$10$Kr0/bG3EsBJHz7Ho/93B6er/Y9HcQCHEzbRnT1nm4UHJVwZZUnYz2', '2023-11-25 18:46:25', 'account-default-pic.jpg', 232414, 'ewqewqwqewq', 1);
 
 -- --------------------------------------------------------
 
@@ -90,14 +106,6 @@ CREATE TABLE `users_products` (
   `users_shop_id` int(255) DEFAULT NULL,
   `display_prod` int(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `users_products`
---
-
-INSERT INTO `users_products` (`id`, `image_product`, `prod_name`, `prod_description`, `prod_price`, `prod_category`, `users_shop_id`, `display_prod`) VALUES
-(10, 'PRODUCT-IMG-656c4978ae3fd2.35168904.jpg', 'DRAGON', 'CAN EAT A FIRE', 20000, 'Fresh Produce', 22, 1),
-(11, 'PRODUCT-IMG-656c8bb11b3481.19073211.jpg', 'mais na bulok', 'MAIS NA MASARAP PARANG AKO', 50, 'Nuts and Seeds', 23, 1);
 
 -- --------------------------------------------------------
 
@@ -118,17 +126,6 @@ CREATE TABLE `users_shop` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `users_shop`
---
-
-INSERT INTO `users_shop` (`id`, `shop_name`, `full_name`, `pickup_Address`, `shop_email`, `shop_PhoneNo`, `user_id`, `shop_image`, `shop_description`) VALUES
-(19, 'goku\'s shop', 'son goku', 'namek', 'goku@gmail.com', 9849538143, 141, 'IMG-656aee8458a141.49262249.png', 'heheeeee'),
-(20, 'goku', 'goku', 'goku', 'goku@gmail.com', 9856124512, 142, 'IMG-656af01564e403.44434775.png', 'safsafafsfsaf fafasf afff ff'),
-(21, 'Natsu\'s Shop', 'Natsu Dragneel', 'evertlasting, santa lucia, CSFP, Pampanga', 'natsu324@shop.com', 98547123, 143, 'IMG-656b829d0893d0.69619297.jpg', 'ALL IM ALL FIRE\r\n'),
-(22, 'motor\'s shop', 'natsu drag', 'evertlasting, santa lucia, CSFP, Pampanga', 'natsu@shop.com', 9876543231, 144, 'IMG-656c4951470715.92802554.png', 'HEEHEHEHEHE'),
-(23, 'yoyoyo', 'yoyoo', 'yoyoyo', '3412', 561251, 145, '../uploads/account-default-pic.jpg', 'PUT SOME DESCRIPTION');
-
---
 -- Indexes for dumped tables
 --
 
@@ -138,6 +135,18 @@ INSERT INTO `users_shop` (`id`, `shop_name`, `full_name`, `pickup_Address`, `sho
 ALTER TABLE `add_cart`
   ADD PRIMARY KEY (`id`),
   ADD KEY `users_id` (`users_id`);
+
+--
+-- Indexes for table `admin_tbl`
+--
+ALTER TABLE `admin_tbl`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `audit_trail`
+--
+ALTER TABLE `audit_trail`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `users`
@@ -167,13 +176,25 @@ ALTER TABLE `users_shop`
 -- AUTO_INCREMENT for table `add_cart`
 --
 ALTER TABLE `add_cart`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `admin_tbl`
+--
+ALTER TABLE `admin_tbl`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT for table `audit_trail`
+--
+ALTER TABLE `audit_trail`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=150;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=153;
 
 --
 -- AUTO_INCREMENT for table `users_products`

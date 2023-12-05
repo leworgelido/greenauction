@@ -26,6 +26,15 @@
 
           if($user && password_verify($_POST["pass"], $user["pass"])) {
             $_SESSION["username"] = $_POST["username"];
+
+            $user_logged_in = $_SESSION["username"];
+
+            $qry = "INSERT INTO `audit_trail` (`action`, `user`) VALUES ('User logged in', :user);";
+            $stmt = $pdo->prepare($qry);
+            $stmt->bindParam(":user", $user_logged_in);
+            $stmt->execute();
+
+
             header("location: home.php");
 
           } else {
